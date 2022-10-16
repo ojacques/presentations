@@ -103,17 +103,6 @@ Tous basés sur JSSI
 
 ---
 
-# 6 GIT commands
-
-* `git branch my_new_feature`
-* `git add .`
-* `git commit -m "New: AWS RDS infrastructure is now managed as code"`
-* `git push -u origin my_new_feature`
-* `git checkout main`
-* `git pull`
-
----
-
 # Séquence
 
 * 📘 `cdktf init`

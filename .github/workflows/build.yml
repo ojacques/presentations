@@ -53,11 +53,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@master
     - name: Style check
-      uses: errata-ai/vale-action@v2.0.1
-      with:
-        styles: |
-          https://github.com/errata-ai/Microsoft/releases/latest/download/Microsoft.zip
-          https://github.com/errata-ai/write-good/releases/latest/download/write-good.zip
+      uses: errata-ai/vale-action@reviewdog
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 

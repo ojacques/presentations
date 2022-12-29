@@ -126,17 +126,15 @@ Nous devons pouvoir utiliser ce concept dans le monde du cloud. Sauf que... voyo
 
 ---
 
-# Définitions
-
-# Plateforme
+# Définition - Plateforme
 
 > "Les plateformes sont un moyen de centraliser l'expertise, tout en décentralisant l'innovation au client ou l'utilisateur"
 
 Peter Gillard-Moss, ThoughtWorks
 
-## Platform Engineering
+## Définition - Platform Engineering
 
-> "le Platform Engineering is the practice of building and operating platforms that enable engineering teams to deliver business value at scale."
+> "Le "Platform Engineering" concerne la création et la maintenance de plateformes informatiques pour héberger des applications et des services en ligne. Cette discipline vise à améliorer l'efficacité et la flexibilité des processus de développement et de déploiement de logiciels."
 
 ChatGPT
 

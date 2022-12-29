@@ -53,7 +53,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@master
     - name: Style check
-      uses: errata-ai/vale-action@v1.3.0
+      uses: errata-ai/vale-action@v2.0.1
       with:
         styles: |
           https://github.com/errata-ai/Microsoft/releases/latest/download/Microsoft.zip

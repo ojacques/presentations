@@ -82,8 +82,8 @@ jobs:
       - run: wget https://github.com/magiclen/markdown2html-converter/releases/download/v1.1.6/markdown2html-converter && chmod a+x markdown2html-converter
       - run: export PATH=$PATH:$(pwd) && mkdir site
       #- run: shopt -s extglob && for folder in ./!\(site\)/ ; do echo handling $folder && mkdir site/$folder && npx @marp-team/marp-cli@latest --html ${folder}/README.md -o site/${folder}/index.html && cp ${folder}/* site/${folder}/; done
-      - run: mkdir site/aws-cdk-intro && npx @marp-team/marp-cli@latest --html aws-cdk-intro/README.md -o site/aws-cdk-intro/index.html && cp aws-cdk-intro/* site/aws-cdk-intro/
-      - run: mkdir site/snowcamp_2023 && npx @marp-team/marp-cli@latest --html snowcamp_2023/README.md -o site/snowcamp_2023/index.html && cp snowcamp_2023/* site/snowcamp_2023/
+      - run: mkdir site/aws-cdk-intro && npx @marp-team/marp-cli@latest --html aws-cdk-intro/README.md -o site/aws-cdk-intro/index.html && cp -r aws-cdk-intro/* site/aws-cdk-intro/
+      - run: mkdir site/snowcamp_2023 && npx @marp-team/marp-cli@latest --html snowcamp_2023/README.md -o site/snowcamp_2023/index.html && cp -r snowcamp_2023/* site/snowcamp_2023/
       - run: ./markdown2html-converter -f -o site/index.html README.md
       # https://github.com/actions/upload-artifact
       - uses: actions/upload-artifact@v2

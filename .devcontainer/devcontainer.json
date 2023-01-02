@@ -18,10 +18,11 @@
     // "appPort": [],
     // Add the IDs of extensions you want installed when the container is created in the array below.
     "extensions": [
-        "marp-team.marp-vscode",
-        "hediet.vscode-drawio",
-        "jebbs.plantuml",
-        "yzhang.markdown-all-in-one",
-        "streetsidesoftware.code-spell-checker"
-    ]
+		"marp-team.marp-vscode",
+		"hediet.vscode-drawio",
+		"jebbs.plantuml",
+		"yzhang.markdown-all-in-one",
+		"streetsidesoftware.code-spell-checker",
+		"pomdtr.excalidraw-editor"
+	]
 }

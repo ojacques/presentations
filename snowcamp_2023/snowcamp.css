@@ -1,0 +1,33 @@
+/* @theme snowcamp2023 */
+
+@import 'default';
+
+section {
+    width: 1280px;
+    height: 960px;
+    background: rgb(255, 255, 255) url(./assets/banner.jpg) no-repeat;
+    background-size: 1280px;
+    font-family: "Arial Rounded MT", "Helvetica Rounded", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 20pt;
+    color: #222;
+    padding-top: 200px;
+}
+
+.container {
+    display: flex;
+    margin-top: 4em;
+}
+
+.col {
+    flex: 1;
+    text-align: center;
+}
+
+.col img {
+    display: flex;
+    margin: auto
+}
+
+.col h2 {
+    text-align: center
+}

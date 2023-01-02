@@ -134,7 +134,7 @@ Peter Gillard-Moss, ThoughtWorks
 
 ---
 
-## Définition - Platform Engineering
+## Définition 1 - Platform Engineering
 
 > "Le "Platform Engineering" concerne la création et la maintenance de plateformes informatiques pour héberger des applications et des services en ligne. Cette discipline vise à améliorer l'efficacité et la flexibilité des processus de développement et de déploiement de logiciels."
 
@@ -142,7 +142,7 @@ ChatGPT
 
 ---
 
-## Définition - Platform Engineering
+## Définition 2 - Platform Engineering
 
 > "L'ingénierie des plates-formes est la discipline qui consiste à concevoir et à créer des chaînes d'outils et des flux de travail qui permettent aux organisations d'ingénierie logicielle de disposer de capacités en libre-service à l'ère du "cloud-native". Les ingénieurs de plate-forme fournissent un produit intégré, souvent appelé "plate-forme interne de développement", qui couvre les besoins opérationnels de l'ensemble du cycle de vie d'une application.
 
@@ -230,13 +230,13 @@ Les standards ne réduisent pas la créativité, mais ils la boostent. Se mettre
 
 Fournir une base de donnée "clé en main", n'est pas fournir une plateforme. C'est fournir un service.
 
-![](assets/platform.excalidraw.png)
+![Une plateforme](assets/platform.excalidraw.png)
 
 ---
 
 # Un service
 
-![](assets/service.excalidraw.png)
+![Un service](assets/service.excalidraw.png)
 
 - Intéragit avec des tickets
 - Responsabilité séparée

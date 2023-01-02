@@ -132,11 +132,21 @@ Nous devons pouvoir utiliser ce concept dans le monde du cloud. Sauf que... voyo
 
 Peter Gillard-Moss, ThoughtWorks
 
+---
+
 ## Définition - Platform Engineering
 
 > "Le "Platform Engineering" concerne la création et la maintenance de plateformes informatiques pour héberger des applications et des services en ligne. Cette discipline vise à améliorer l'efficacité et la flexibilité des processus de développement et de déploiement de logiciels."
 
 ChatGPT
+
+---
+
+## Définition - Platform Engineering
+
+> "L'ingénierie des plates-formes est la discipline qui consiste à concevoir et à créer des chaînes d'outils et des flux de travail qui permettent aux organisations d'ingénierie logicielle de disposer de capacités en libre-service à l'ère du "cloud-native". Les ingénieurs de plate-forme fournissent un produit intégré, souvent appelé "plate-forme interne de développement", qui couvre les besoins opérationnels de l'ensemble du cycle de vie d'une application.
+
+[Luca Galante](https://platformengineering.org/blog/what-is-platform-engineering)
 
 ---
 
@@ -220,7 +230,13 @@ Les standards ne réduisent pas la créativité, mais ils la boostent. Se mettre
 
 Fournir une base de donnée "clé en main", n'est pas fournir une plateforme. C'est fournir un service.
 
-## Un service
+![](assets/platform.excalidraw.png)
+
+---
+
+# Un service
+
+![](assets/service.excalidraw.png)
 
 - Intéragit avec des tickets
 - Responsabilité séparée
@@ -239,6 +255,64 @@ AWS, K8s.
 
 ![bg 60%](assets/team_topologies_book.jpg)
 ![bg 60%](assets/platform_strategy.png)
+
+---
+
+# Kubernetes comme platforme framework
+
+- Self service avec les Kubernetes API
+- Extensible par nature avec les controllers et les définitions de ressource personnalisé
+- Auto scale
+- Auto heal
+- Declarative approach
+- Bénéficie d'un echo système très large permettant le monitoring, l'observabilité, la sécurité
+- Permet de changer de paradigme de pipeline (push pipeline devient pull pipeline)
+- **Un seul language/format pour gérer l'infrastructure et l'application (A développer)**
+  
+---
+
+# Move from push pipelines to pull pipelines
+
+- Adopter une approche défensive
+- Amélioration de la sécurité avec des pipelines de type pull
+- Utilisation d'outils GitOps (Flux, Rancher Fleet, ArgoCD)
+
+---
+
+# Gestion des permssions
+
+- Simplification de la gestion des permissions des utilisateurs
+- Simplification de la gestion des permissions dans les pipelines
+
+---
+
+# Qu'est ce qu'un controlleur Kubernetes
+
+**Un controlleur traque un type de ressource définissant un état afin de modifier la plateforme pour atteindre l'état désiré.**
+
+Et si les ressources étaient de type infrastructure ou encore de type interne à l'entreprise.
+
+---
+
+# Ressource de type infrastucture
+
+Il existe actuellement plusieurs controlleurs kubernetes permettant de piloter des clouds.
+
+- [Crossplane](https://www.crossplane.io/)
+- [AWS ACK Controller](https://aws.amazon.com/fr/blogs/containers/aws-controllers-for-kubernetes-ack/)
+- [GCP Config Connector](https://cloud.google.com/config-connector/docs/overview)
+
+---
+
+# Enforce compliance with company policies
+
+- OPA Gatekeeper
+- Validating webhook
+- Mutating webhook
+
+---
+
+Developers should be able to deploy and run their apps and services end to end. “You build it, you run it”. True DevOps.
 
 ---
 

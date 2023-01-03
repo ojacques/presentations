@@ -1,42 +1,52 @@
 ---
 marp: true
-backgroundColor: #F1F3F3
-color: #232F3E
-style: |
-  section.titleslide h1 {
-    color: #ffffff;
-  }
-  section.titleslide h2 {
-    color: #ffffff;
-  }
-  section.titleslide p {
-    color: #ffffff;
-  }
-  a {
-    color: #ff6633;
-  }
-  video.inslide {
-    position: absolute;
-    width: 80%;
-    height: 80%;
-    left: 10%;
-  }
-  footer {
-    position: absolute;
-    left: 40%;
-    bottom: 30px;
-    font-size: 14px;
-  }
-  img {
-    background-color: transparent!important;
-  }
-header: 'This is code. Fork it on [github.com/ojacques](https://github.com/ojacques)'
-footer: '© 2023, Amazon Web Services, Inc. or its Affiliates.'
+theme: snowcamp2023
+
+# header: 'This is code. Fork it on [github.com/ojacques](https://github.com/ojacques)'
+# footer: '© 2023, Amazon Web Services, Inc. or its Affiliates.'
 ---
 
-<!-- _class: titleslide -->
+# Who are we?
 
-![bg](bg_title.jpg)
+<div class="container">
+
+<div class="col">
+
+![drop-shadow:0,5px,10px,rgba(0,0,0,.4) width:300px](https://media.licdn.com/dms/image/C4D03AQHAHQ3ml3xL2g/profile-displayphoto-shrink_800_800/0/1606292311924?e=1678320000&v=beta&t=C1uIawGRh8n7iVepZ48qTh0VZVZTHaZ1gCplRdcNcmk)
+
+<!-- markdown-link-check-disable -->
+## [Laurent GIL](https://www.linkedin.com/in/laurent-gil/?locale=en_US)
+<!-- markdown-link-check-enable -->
+
+DevOps Coach,
+AWS Solution Architect,
+Kubernetes evangelist
+
+</div>
+
+<div class="col">
+
+![drop-shadow:0,4px,10px,rgba(0,0,0,.4) width:300px](https://media.licdn.com/dms/image/D4E03AQFUu10C9Itf8A/profile-displayphoto-shrink_800_800/0/1668752660252?e=1678320000&v=beta&t=Hs8485uJGgD-VgmTWJfpv26crAxdVRFP-53wBBdBZGk)
+<!-- markdown-link-check-disable -->
+## [Olivier Jacques](https://www.linkedin.com/in/olivierjacques/)
+<!-- markdown-link-check-enable -->
+
+<!--
+I am Laurent. I've been working at manomano for 5 years where I had several roles,
+Lead Developer, QA, and now QE.
+My goal is to reduce the friction and time wasted due to an ecosystem in order to improve the developer.experience.
+-->
+
+Sr Cloud & DevOps Architect
+AWS
+
+</div>
+
+</div>
+
+---
+
+<!-- ![bg](bg_title.jpg) -->
 
 # Platform Engineering
 
@@ -96,9 +106,6 @@ Essayons ici de faire le tri.
 - Kubernetes comme plateforme de base
 
 ---
-
-<!-- _class: titleslide -->
-
 ![bg](assets/werner.jpg)
 
 <br/><br/><br/><br/><br/><br/><br/>
@@ -111,9 +118,6 @@ Je voulais remettre ici cette citation de Dr Werner Vogels, CTO AWS. "You Build 
 -->
 
 ---
-
-<!-- _class: titleslide -->
-![bg](bg_divider.jpg)
 
 # Les plateformes
 
@@ -201,9 +205,6 @@ Les standards ne réduisent pas la créativité, mais ils la boostent. Se mettre
 
 ---
 
-<!-- _class: titleslide -->
-![bg](bg_divider.jpg)
-
 # Reussir une plateforme
 
 ---
@@ -258,31 +259,27 @@ AWS, K8s.
 
 ---
 
+# Une solution
+
+---
+
+# A propos de Kubernetes
+
+📖 Kubernetes est une plate-forme open-source extensible et portable pour la gestion de charges de travail (workloads) et de services conteneurisés📖
+
+📖Kubernetes a également été conçu pour servir de plate-forme et favoriser la construction d’un écosystème de composants et d’outils facilitant le déploiement, la mise à l’échelle et la gestion des applications.📖
+
+[source](https://kubernetes.io/fr/docs/concepts/overview/what-is-kubernetes/)
+
+---
+
 # Kubernetes comme platforme framework
 
 - Self service avec les Kubernetes API
-- Extensible par nature avec les controllers et les définitions de ressource personnalisé
-- Auto scale
-- Auto heal
 - Declarative approach
-- Bénéficie d'un echo système très large permettant le monitoring, l'observabilité, la sécurité
-- Permet de changer de paradigme de pipeline (push pipeline devient pull pipeline)
-- **Un seul language/format pour gérer l'infrastructure et l'application (A développer)**
-  
----
-
-# Move from push pipelines to pull pipelines
-
-- Adopter une approche défensive
-- Amélioration de la sécurité avec des pipelines de type pull
-- Utilisation d'outils GitOps (Flux, Rancher Fleet, ArgoCD)
-
----
-
-# Gestion des permssions
-
-- Simplification de la gestion des permissions des utilisateurs
-- Simplification de la gestion des permissions dans les pipelines
+- Bénéficie d'un écosystème très large permettant le monitoring, l'observabilité, la sécurité
+- Permet de changer le paradigme de pipeline (push pipeline devient pull pipeline)
+- Extensible par nature avec les controlleurs et les définitions de ressource personnalisé
 
 ---
 
@@ -290,7 +287,7 @@ AWS, K8s.
 
 **Un controlleur traque un type de ressource définissant un état afin de modifier la plateforme pour atteindre l'état désiré.**
 
-Et si les ressources étaient de type infrastructure ou encore de type interne à l'entreprise.
+Et si les ressources étaient de type infrastructure ou encore des applications internes à l'entreprise.
 
 ---
 
@@ -304,21 +301,57 @@ Il existe actuellement plusieurs controlleurs kubernetes permettant de piloter d
 
 ---
 
-# Enforce compliance with company policies
+# Resource de type interne à l'entreprise
 
-- OPA Gatekeeper
-- Validating webhook
-- Mutating webhook
+- Créer des définitions de ressource personnalisées
+- Créer des controlleurs personnalisées permettant de piloter des outils internes (ex: renseigner une base de référence d'application à partir de resources de type déploiment)
+  
+---
+
+# Les bénéfices
+
+---
+
+# Gestion centralisée de la conformité et de la sécurité
+
+Instrumenter la stack Kubernetes pour forcer la conformité et centraliser les règles de conformité :
+
+- [OPA Gatekeeper](https://github.com/open-policy-agent/gatekeeper) ([policy library](https://open-policy-agent.github.io/gatekeeper-library/website/allowedrepos)) : at the API level
+- [KubeArmor](https://github.com/kubearmor/kubearmor) : at the system level
+
+---
+
+# Améliorer le temps de reprise après sinistre
+
+## Habituellement
+
+- un pipeline pour l'infrastructure
+- un pipeline pour l'applications
+
+## Avec Kubernetes
+
+- un pipeline pour déployer les **manifestes d'infrastructure et d'application**
+
+---
+
+# Move from push pipelines to pull pipelines
+
+- Adopter une approche défensive, l'orchestrateur n'a pas de droits sur l'infrastructure
+- Amélioration de la sécurité avec des pipelines de type pull
+- Utilisation d'**outils GitOps** (Flux, Rancher Fleet, ArgoCD)
+
+---
+
+# Gestion des permissions
+
+- Simplification de la gestion des permissions des utilisateurs
+- Simplification de la gestion des permissions dans les pipelines
 
 ---
 
 Developers should be able to deploy and run their apps and services end to end. “You build it, you run it”. True DevOps.
 
 ---
-
-<!-- _class: titleslide -->
-
-![bg](bg_title.jpg)
 
 # Merci
 

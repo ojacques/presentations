@@ -32,12 +32,13 @@ Kubernetes evangelist
 <!-- markdown-link-check-enable -->
 
 <!--
-I am Guillaume. I've been working at manomano for 5 years where I had several roles,
+I am Laurent. I've been working at manomano for 5 years where I had several roles,
 Lead Developer, QA, and now QE.
 My goal is to reduce the friction and time wasted due to an ecosystem in order to improve the developer.experience.
 -->
 
-Developer and Quality Engineer
+Sr Cloud & DevOps Architect
+AWS
 
 </div>
 
@@ -270,7 +271,7 @@ AWS, K8s.
 
 [source](https://kubernetes.io/fr/docs/concepts/overview/what-is-kubernetes/)
 
---- 
+---
 
 # Kubernetes comme platforme framework
 

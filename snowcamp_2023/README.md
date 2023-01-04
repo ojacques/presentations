@@ -46,8 +46,6 @@ AWS
 
 ---
 
-<!-- ![bg](bg_title.jpg) -->
-
 # Platform Engineering
 
 ## Lorsque Kubernetes devient la clé du royaume
@@ -218,15 +216,6 @@ Les standards ne réduisent pas la créativité, mais ils la boostent. Se mettre
 
 ---
 
-# Caractéristiques d'une bonne plateforme
-
-- Facile à adopter
-- Transparente dans sa gouvernance, son fonctionnement
-- Responsabilité partagée (Inner Source)
-- Non obligatoire
-
----
-
 # ⚠️ Une plateforme n'est pas un service
 
 Fournir une base de donnée "clé en main", n'est pas fournir une plateforme. C'est fournir un service.
@@ -256,38 +245,6 @@ AWS, K8s.
 
 ![bg 60%](assets/team_topologies_book.jpg)
 ![bg 60%](assets/platform_strategy.png)
-
----
-
-# Une solution
-
----
-
-# A propos de Kubernetes
-
-📖 Kubernetes est une plate-forme open-source extensible et portable pour la gestion de charges de travail (workloads) et de services conteneurisés📖
-
-📖Kubernetes a également été conçu pour servir de plate-forme et favoriser la construction d’un écosystème de composants et d’outils facilitant le déploiement, la mise à l’échelle et la gestion des applications.📖
-
-[source](https://kubernetes.io/fr/docs/concepts/overview/what-is-kubernetes/)
-
----
-
-# Kubernetes comme platforme framework
-
-- Self service avec les Kubernetes API
-- Declarative approach
-- Bénéficie d'un écosystème très large permettant le monitoring, l'observabilité, la sécurité
-- Permet de changer le paradigme de pipeline (push pipeline devient pull pipeline)
-- Extensible par nature avec les controlleurs et les définitions de ressource personnalisé
-
----
-
-# Qu'est ce qu'un controlleur Kubernetes
-
-**Un controlleur traque un type de ressource définissant un état afin de modifier la plateforme pour atteindre l'état désiré.**
-
-Et si les ressources étaient de type infrastructure ou encore des applications internes à l'entreprise.
 
 ---
 
@@ -356,3 +313,80 @@ Developers should be able to deploy and run their apps and services end to end. 
 # Merci
 
 🐤 @ojacques2 @angegar
+
+---
+
+# Build it, Ship it, Run it
+
+![](assets/devops.excalidraw.png)
+
+---
+
+## Problèmes
+
+![](https://pizzaanna.fr/wp-content/uploads/2020/10/002-pizza-1.png)
+![](https://pizzaanna.fr/wp-content/uploads/2020/10/002-pizza-1.png)
+
+*Pas assez de ressources humaines*
+
+---
+
+# Solution
+
+![](assets/devopplatform.excalidraw.png)
+
+---
+
+# Caractéristiques d'une bonne plateforme
+
+- Facile à adopter
+- Transparente dans sa gouvernance, son fonctionnement
+- Responsabilité partagée (Inner Source)
+- Flexible et extensible
+
+---
+
+# Une implémentation à base de Kubernetes
+
+---
+
+# A propos de Kubernetes
+
+📖 Kubernetes est une plate-forme open-source extensible et portable pour la gestion de charges de travail (workloads) et de services conteneurisés📖
+
+📖 Kubernetes a également été conçu pour servir de plate-forme et favoriser la construction d’un écosystème de composants et d’outils facilitant le déploiement, la mise à l’échelle et la gestion des applications.📖
+
+[source](https://kubernetes.io/fr/docs/concepts/overview/what-is-kubernetes/)
+
+---
+
+# Kubernetes comme platforme framework
+
+- Self service avec les Kubernetes API extensibles
+- Une approche déclarative
+- Bénéficie d'un écosystème très large permettant le monitoring, l'observabilité, la sécurité
+!!!! - Permet de changer le paradigme de pipeline (push pipeline devient pull pipeline) !!!!
+- Extensible par nature avec les controlleurs et les définitions de ressource personnalisé
+- Robustess and self-healing
+
+---
+
+# Qu'est ce qu'un controlleur Kubernetes
+
+**Un controlleur traque un type de ressource définissant un état afin de modifier la plateforme pour atteindre l'état désiré.**
+
+Et si les ressources étaient de type infrastructure ou encore des applications internes à l'entreprise.
+
+
+DevOps => Build it run it ship => problèmes => les PIZZA teams ne sont pas taillésp pour résoudre tous les problèmes d'opérations, d'infrastructure de compliance en plus de leur développement (CHARGE COGNITIVE) => Platform Engineering
+
+
+
+- Une plateforme commune et un langage commun pour les équipes DevOps et l'équipe Plateform Engineering (Infrastructure)
+
+
+- authentification
+- authorization
+- fournit des services de base:
+  - monitoring
+  - 

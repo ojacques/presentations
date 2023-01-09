@@ -318,7 +318,7 @@ Developers should be able to deploy and run their apps and services end to end. 
 
 # Build it, Ship it, Run it
 
-![](assets/devops.excalidraw.png)
+![DevOps inside](assets/devops.excalidraw.png)
 
 ---
 

@@ -324,8 +324,8 @@ Developers should be able to deploy and run their apps and services end to end. 
 
 ## Problèmes
 
-![](https://pizzaanna.fr/wp-content/uploads/2020/10/002-pizza-1.png)
-![](https://pizzaanna.fr/wp-content/uploads/2020/10/002-pizza-1.png)
+![One pizza](https://pizzaanna.fr/wp-content/uploads/2020/10/002-pizza-1.png)
+![One pizza](https://pizzaanna.fr/wp-content/uploads/2020/10/002-pizza-1.png)
 
 *Pas assez de ressources humaines*
 
@@ -333,7 +333,7 @@ Developers should be able to deploy and run their apps and services end to end. 
 
 # Solution
 
-![](assets/devopplatform.excalidraw.png)
+![DevOps inside](assets/devopplatform.excalidraw.png)
 
 ---
 
@@ -389,4 +389,3 @@ DevOps => Build it run it ship => problèmes => les PIZZA teams ne sont pas tail
 - authorization
 - fournit des services de base:
   - monitoring
-  - 

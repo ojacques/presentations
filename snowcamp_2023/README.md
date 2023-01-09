@@ -327,7 +327,7 @@ Developers should be able to deploy and run their apps and services end to end. 
 ![One pizza](https://pizzaanna.fr/wp-content/uploads/2020/10/002-pizza-1.png)
 ![One pizza](https://pizzaanna.fr/wp-content/uploads/2020/10/002-pizza-1.png)
 
-*Pas assez de ressources humaines*
+**Pas assez de ressources humaines**
 
 ---
 
@@ -377,13 +377,9 @@ Developers should be able to deploy and run their apps and services end to end. 
 
 Et si les ressources étaient de type infrastructure ou encore des applications internes à l'entreprise.
 
-
 DevOps => Build it run it ship => problèmes => les PIZZA teams ne sont pas taillésp pour résoudre tous les problèmes d'opérations, d'infrastructure de compliance en plus de leur développement (CHARGE COGNITIVE) => Platform Engineering
 
-
-
 - Une plateforme commune et un langage commun pour les équipes DevOps et l'équipe Plateform Engineering (Infrastructure)
-
 
 - authentification
 - authorization

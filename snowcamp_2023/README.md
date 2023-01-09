@@ -134,7 +134,7 @@ Pas assez de ressources humaines
 
 # Solution
 
-![](assets/devopplatform.excalidraw.png)
+![DevOps platform](assets/devopplatform.excalidraw.png)
 
 ---
 

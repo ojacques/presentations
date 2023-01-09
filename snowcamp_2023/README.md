@@ -327,7 +327,7 @@ Developers should be able to deploy and run their apps and services end to end. 
 ![One pizza](https://pizzaanna.fr/wp-content/uploads/2020/10/002-pizza-1.png)
 ![One pizza](https://pizzaanna.fr/wp-content/uploads/2020/10/002-pizza-1.png)
 
-**Pas assez de ressources humaines**
+Pas assez de ressources humaines
 
 ---
 

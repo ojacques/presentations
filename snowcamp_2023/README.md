@@ -356,8 +356,8 @@ Et si les ressources étaient de type infrastructure ou encore des applications 
 # Monitoring des applications
 
 - [Grafana](https://github.com/grafana/grafana)
-- [Dynatrace](https://www.crunchbase.com/organization/dynatrace-software)
-- [Datadog](https://www.crunchbase.com/organization/datadog)
+- [Dynatrace](https://www.dynatrace.com/)
+- [Datadog](https://www.datadoghq.com/)
 
 ---
 

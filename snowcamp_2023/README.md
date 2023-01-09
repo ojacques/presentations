@@ -46,8 +46,6 @@ AWS
 
 ---
 
-<!-- ![bg](bg_title.jpg) -->
-
 # Platform Engineering
 
 ## Lorsque Kubernetes devient la clé du royaume
@@ -116,6 +114,27 @@ Essayons ici de faire le tri.
 <!-- 
 Je voulais remettre ici cette citation de Dr Werner Vogels, CTO AWS. "You Build it, you run it". C'est important, car c'est comme cela que nous opérons à AWS. Cela dit, tout n'est pas dit dans ces 6 mots. Pour opérer ainsi, nous avons besoin de plateformes. Notre plateforme est bien évidemment AWS, avec ces plus de 200 services que nous pouvons assembler pour créer des solutions. Mais pas seulement. Nous avons aussi des plateformes construites au dessus d'AWS, par nos équipes, pour encore améliorer la productivité de nos équipes. Et c'est là que le Platform Engineering entre en jeu.
 -->
+
+---
+
+# Build it, Ship it, Run it
+
+![Inside DevOps](assets/devops.excalidraw.png)
+
+---
+
+## Problèmes
+
+![Pizza](https://pizzaanna.fr/wp-content/uploads/2020/10/002-pizza-1.png)
+![Pizza](https://pizzaanna.fr/wp-content/uploads/2020/10/002-pizza-1.png)
+
+Pas assez de ressources humaines
+
+---
+
+# Solution
+
+![DevOps platform](assets/devopplatform.excalidraw.png)
 
 ---
 
@@ -209,21 +228,21 @@ Les standards ne réduisent pas la créativité, mais ils la boostent. Se mettre
 
 ---
 
+# Caractéristiques d'une bonne plateforme
+
+- Facile à adopter
+- Transparente dans sa gouvernance, son fonctionnement
+- Responsabilité partagée (Inner Source)
+- Flexible et extensible
+
+---
+
 # Gérer sa plateforme comme un produit
 
 - Un Product Owner: la vision, les besoins des utilisateurs
 - Une équipe de développeurs
 - une feuille de route
 - des utilisateurs !
-
----
-
-# Caractéristiques d'une bonne plateforme
-
-- Facile à adopter
-- Transparente dans sa gouvernance, son fonctionnement
-- Responsabilité partagée (Inner Source)
-- Non obligatoire
 
 ---
 
@@ -259,7 +278,7 @@ AWS, K8s.
 
 ---
 
-# Une solution
+# Une implémentation à base de Kubernetes
 
 ---
 
@@ -267,7 +286,7 @@ AWS, K8s.
 
 📖 Kubernetes est une plate-forme open-source extensible et portable pour la gestion de charges de travail (workloads) et de services conteneurisés📖
 
-📖Kubernetes a également été conçu pour servir de plate-forme et favoriser la construction d’un écosystème de composants et d’outils facilitant le déploiement, la mise à l’échelle et la gestion des applications.📖
+📖 Kubernetes a également été conçu pour servir de plate-forme et favoriser la construction d’un écosystème de composants et d’outils facilitant le déploiement, la mise à l’échelle et la gestion des applications.📖
 
 [source](https://kubernetes.io/fr/docs/concepts/overview/what-is-kubernetes/)
 
@@ -275,11 +294,12 @@ AWS, K8s.
 
 # Kubernetes comme platforme framework
 
-- Self service avec les Kubernetes API
-- Declarative approach
+- Self service avec les Kubernetes API extensibles
+- Une approche déclarative
 - Bénéficie d'un écosystème très large permettant le monitoring, l'observabilité, la sécurité
-- Permet de changer le paradigme de pipeline (push pipeline devient pull pipeline)
+!!!! - Permet de changer le paradigme de pipeline (push pipeline devient pull pipeline) !!!!
 - Extensible par nature avec les controlleurs et les définitions de ressource personnalisé
+- Robustness and self-healing
 
 ---
 
@@ -291,33 +311,99 @@ Et si les ressources étaient de type infrastructure ou encore des applications 
 
 ---
 
-# Ressource de type infrastucture
+![bg left 70%](assets/platform-ci.excalidraw.png)
 
-Il existe actuellement plusieurs controlleurs kubernetes permettant de piloter des clouds.
+# As CI / CD plateform
+
+- Run CI
+  - JenkinsX /
+  - Tekton
+- Run CD
+  - ArgoCD
+  - Flux
+
+---
+
+![bg right 70%](assets/platform-test.excalidraw.png)
+
+# Comme plateforme de test
+
+- kubernetes cluster virtuel (nodes et network partagés entre cluster physique et virtuel)
+- Créer et détruire des environnements de teste à la volée
+
+---
+
+![bg left 70%](assets/platform-infra.excalidraw.png)
+
+# Pour gérer l'infrastructure
+
+## Ressource de type infrastucture
 
 - [Crossplane](https://www.crossplane.io/)
 - [AWS ACK Controller](https://aws.amazon.com/fr/blogs/containers/aws-controllers-for-kubernetes-ack/)
 - [GCP Config Connector](https://cloud.google.com/config-connector/docs/overview)
 
----
-
-# Resource de type interne à l'entreprise
+## Resource de type interne à l'entreprise
 
 - Créer des définitions de ressource personnalisées
-- Créer des controlleurs personnalisées permettant de piloter des outils internes (ex: renseigner une base de référence d'application à partir de resources de type déploiment)
+- Créer des controlleurs personnalisées permettant de piloter des outils internes
+<!--(ex: renseigner une base de référence d'application à partir de resources de type déploiment) -->
+
+---
+
+![bg left 70%](assets/platform-monitoring.excalidraw.png)
+
+# Monitoring des applications
+
+- [Grafana](https://github.com/grafana/grafana)
+- [Dynatrace](https://www.dynatrace.com/)
+- [Datadog](https://www.datadoghq.com/)
+
+---
+
+![bg right 70%](assets/platform-logging.excalidraw.png)
+
+# Collecter les log de manière centrale
+
+- [Fluentd](https://github.com/fluent/fluentd)
+- [Loggie](https://github.com/loggie-io/loggie)
+
+---
+
+![bg left 70%](assets/platform-conformite.excalidraw.png)
+
+# Gestion centralisée de la conformité
+
+<!-- Réalisé au niveau de l'API via des webhooks -->
+
+Instrumenter la stack Kubernetes pour forcer la conformité :
+
+- [OPA Gatekeeper](https://github.com/open-policy-agent/gatekeeper) ([policy library](https://open-policy-agent.github.io/gatekeeper-library/website/allowedrepos))
+
+- [Kyverno](https://github.com/kyverno/kyverno) ([policy library](https://kyverno.io/policies/?policytypes=Deployment))
+
+---
+
+![bg right 70%](assets/platform-securite.excalidraw.png)
+
+# Gestion centralisée de la sécurité
+
+- [KubeArmor](https://github.com/kubearmor/kubearmor) : at the system level
+- [Trivy-Operator](https://github.com/aquasecurity/trivy-operator)
   
 ---
+
+![bg right 90%](assets/platform-end.excalidraw.png)
 
 # Les bénéfices
 
 ---
 
-# Gestion centralisée de la conformité et de la sécurité
+# Opérabilité
 
-Instrumenter la stack Kubernetes pour forcer la conformité et centraliser les règles de conformité :
-
-- [OPA Gatekeeper](https://github.com/open-policy-agent/gatekeeper) ([policy library](https://open-policy-agent.github.io/gatekeeper-library/website/allowedrepos)) : at the API level
-- [KubeArmor](https://github.com/kubearmor/kubearmor) : at the system level
+- Une seul language pour gérer une multitude de problèmes (infrastructure, application, monitoring ...)
+- Une CLI commune à toutes les applications pour la recherche de problèmes
+- Des services standards utilisés par toutes les équipes
 
 ---
 
@@ -328,7 +414,7 @@ Instrumenter la stack Kubernetes pour forcer la conformité et centraliser les r
 - un pipeline pour l'infrastructure
 - un pipeline pour l'applications
 
-## Avec Kubernetes
+## Avec Kubernetes comme plateforme
 
 - un pipeline pour déployer les **manifestes d'infrastructure et d'application**
 
@@ -336,8 +422,8 @@ Instrumenter la stack Kubernetes pour forcer la conformité et centraliser les r
 
 # Move from push pipelines to pull pipelines
 
-- Adopter une approche défensive, l'orchestrateur n'a pas de droits sur l'infrastructure
-- Amélioration de la sécurité avec des pipelines de type pull
+- Amélioration de la sécurité
+- Scalabilité des chaînes de déploiement
 - Utilisation d'**outils GitOps** (Flux, Rancher Fleet, ArgoCD)
 
 ---
@@ -356,3 +442,14 @@ Developers should be able to deploy and run their apps and services end to end. 
 # Merci
 
 🐤 @ojacques2 @angegar
+
+---
+
+DevOps => Build it run it ship => problèmes => les PIZZA teams ne sont pas taillésp pour résoudre tous les problèmes d'opérations, d'infrastructure de compliance en plus de leur développement (CHARGE COGNITIVE) => Platform Engineering
+
+- Une plateforme commune et un langage commun pour les équipes DevOps et l'équipe Plateform Engineering (Infrastructure)
+
+- authentification
+- authorization
+- fournit des services de base:
+  - monitoring

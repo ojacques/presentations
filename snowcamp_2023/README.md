@@ -119,22 +119,22 @@ Je voulais remettre ici cette citation de Dr Werner Vogels, CTO AWS. "You Build 
 
 # Build it, Ship it, Run it
 
-![](assets/devops.excalidraw.png)
+![Inside DevOps](assets/devops.excalidraw.png)
 
 ---
 
 ## Problèmes
 
-![](https://pizzaanna.fr/wp-content/uploads/2020/10/002-pizza-1.png)
-![](https://pizzaanna.fr/wp-content/uploads/2020/10/002-pizza-1.png)
+![Pizza](https://pizzaanna.fr/wp-content/uploads/2020/10/002-pizza-1.png)
+![Pizza](https://pizzaanna.fr/wp-content/uploads/2020/10/002-pizza-1.png)
 
-*Pas assez de ressources humaines*
+Pas assez de ressources humaines
 
 ---
 
 # Solution
 
-![](assets/devopplatform.excalidraw.png)
+![DevOps platform](assets/devopplatform.excalidraw.png)
 
 ---
 
@@ -316,7 +316,7 @@ Et si les ressources étaient de type infrastructure ou encore des applications 
 # As CI / CD plateform
 
 - Run CI
-  - JenkinsX / 
+  - JenkinsX /
   - Tekton
 - Run CD
   - ArgoCD
@@ -358,7 +358,7 @@ Et si les ressources étaient de type infrastructure ou encore des applications 
 - [Grafana](https://github.com/grafana/grafana)
 - [Dynatrace](https://www.crunchbase.com/organization/dynatrace-software)
 - [Datadog](https://www.crunchbase.com/organization/datadog)
- 
+
 ---
 
 ![bg right 70%](assets/platform-logging.excalidraw.png)
@@ -378,7 +378,7 @@ Et si les ressources étaient de type infrastructure ou encore des applications 
 
 Instrumenter la stack Kubernetes pour forcer la conformité :
 
-- [OPA Gatekeeper](https://github.com/open-policy-agent/gatekeeper) ([policy library](https://open-policy-agent.github.io/gatekeeper-library/website/allowedrepos)) 
+- [OPA Gatekeeper](https://github.com/open-policy-agent/gatekeeper) ([policy library](https://open-policy-agent.github.io/gatekeeper-library/website/allowedrepos))
 
 - [Kyverno](https://github.com/kyverno/kyverno) ([policy library](https://kyverno.io/policies/?policytypes=Deployment))
 
@@ -443,20 +443,13 @@ Developers should be able to deploy and run their apps and services end to end. 
 
 🐤 @ojacques2 @angegar
 
-
-
 ---
-
 
 DevOps => Build it run it ship => problèmes => les PIZZA teams ne sont pas taillésp pour résoudre tous les problèmes d'opérations, d'infrastructure de compliance en plus de leur développement (CHARGE COGNITIVE) => Platform Engineering
 
-
-
 - Une plateforme commune et un langage commun pour les équipes DevOps et l'équipe Plateform Engineering (Infrastructure)
-
 
 - authentification
 - authorization
 - fournit des services de base:
   - monitoring
-  - 

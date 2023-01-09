@@ -117,6 +117,27 @@ Je voulais remettre ici cette citation de Dr Werner Vogels, CTO AWS. "You Build 
 
 ---
 
+# Build it, Ship it, Run it
+
+![](assets/devops.excalidraw.png)
+
+---
+
+## Problèmes
+
+![](https://pizzaanna.fr/wp-content/uploads/2020/10/002-pizza-1.png)
+![](https://pizzaanna.fr/wp-content/uploads/2020/10/002-pizza-1.png)
+
+*Pas assez de ressources humaines*
+
+---
+
+# Solution
+
+![](assets/devopplatform.excalidraw.png)
+
+---
+
 # Les plateformes
 
 <!--
@@ -207,6 +228,15 @@ Les standards ne réduisent pas la créativité, mais ils la boostent. Se mettre
 
 ---
 
+# Caractéristiques d'une bonne plateforme
+
+- Facile à adopter
+- Transparente dans sa gouvernance, son fonctionnement
+- Responsabilité partagée (Inner Source)
+- Flexible et extensible
+
+---
+
 # Gérer sa plateforme comme un produit
 
 - Un Product Owner: la vision, les besoins des utilisateurs
@@ -248,104 +278,6 @@ AWS, K8s.
 
 ---
 
-# Ressource de type infrastucture
-
-Il existe actuellement plusieurs controlleurs kubernetes permettant de piloter des clouds.
-
-- [Crossplane](https://www.crossplane.io/)
-- [AWS ACK Controller](https://aws.amazon.com/fr/blogs/containers/aws-controllers-for-kubernetes-ack/)
-- [GCP Config Connector](https://cloud.google.com/config-connector/docs/overview)
-
----
-
-# Resource de type interne à l'entreprise
-
-- Créer des définitions de ressource personnalisées
-- Créer des controlleurs personnalisées permettant de piloter des outils internes (ex: renseigner une base de référence d'application à partir de resources de type déploiment)
-  
----
-
-# Les bénéfices
-
----
-
-# Gestion centralisée de la conformité et de la sécurité
-
-Instrumenter la stack Kubernetes pour forcer la conformité et centraliser les règles de conformité :
-
-- [OPA Gatekeeper](https://github.com/open-policy-agent/gatekeeper) ([policy library](https://open-policy-agent.github.io/gatekeeper-library/website/allowedrepos)) : at the API level
-- [KubeArmor](https://github.com/kubearmor/kubearmor) : at the system level
-
----
-
-# Améliorer le temps de reprise après sinistre
-
-## Habituellement
-
-- un pipeline pour l'infrastructure
-- un pipeline pour l'applications
-
-## Avec Kubernetes
-
-- un pipeline pour déployer les **manifestes d'infrastructure et d'application**
-
----
-
-# Move from push pipelines to pull pipelines
-
-- Adopter une approche défensive, l'orchestrateur n'a pas de droits sur l'infrastructure
-- Amélioration de la sécurité avec des pipelines de type pull
-- Utilisation d'**outils GitOps** (Flux, Rancher Fleet, ArgoCD)
-
----
-
-# Gestion des permissions
-
-- Simplification de la gestion des permissions des utilisateurs
-- Simplification de la gestion des permissions dans les pipelines
-
----
-
-Developers should be able to deploy and run their apps and services end to end. “You build it, you run it”. True DevOps.
-
----
-
-# Merci
-
-🐤 @ojacques2 @angegar
-
----
-
-# Build it, Ship it, Run it
-
-![DevOps inside](assets/devops.excalidraw.png)
-
----
-
-## Problèmes
-
-![One pizza](https://pizzaanna.fr/wp-content/uploads/2020/10/002-pizza-1.png)
-![One pizza](https://pizzaanna.fr/wp-content/uploads/2020/10/002-pizza-1.png)
-
-Pas assez de ressources humaines
-
----
-
-# Solution
-
-![DevOps inside](assets/devopplatform.excalidraw.png)
-
----
-
-# Caractéristiques d'une bonne plateforme
-
-- Facile à adopter
-- Transparente dans sa gouvernance, son fonctionnement
-- Responsabilité partagée (Inner Source)
-- Flexible et extensible
-
----
-
 # Une implémentation à base de Kubernetes
 
 ---
@@ -367,7 +299,7 @@ Pas assez de ressources humaines
 - Bénéficie d'un écosystème très large permettant le monitoring, l'observabilité, la sécurité
 !!!! - Permet de changer le paradigme de pipeline (push pipeline devient pull pipeline) !!!!
 - Extensible par nature avec les controlleurs et les définitions de ressource personnalisé
-- Robustess and self-healing
+- Robustness and self-healing
 
 ---
 
@@ -376,6 +308,145 @@ Pas assez de ressources humaines
 **Un controlleur traque un type de ressource définissant un état afin de modifier la plateforme pour atteindre l'état désiré.**
 
 Et si les ressources étaient de type infrastructure ou encore des applications internes à l'entreprise.
+
+---
+
+![bg left 70%](assets/platform-ci.excalidraw.png)
+
+# As CI / CD plateform
+
+- Run CI
+  - JenkinsX / 
+  - Tekton
+- Run CD
+  - ArgoCD
+  - Flux
+
+---
+
+![bg right 70%](assets/platform-test.excalidraw.png)
+
+# Comme plateforme de test
+
+- kubernetes cluster virtuel (nodes et network partagés entre cluster physique et virtuel)
+- Créer et détruire des environnements de teste à la volée
+
+---
+
+![bg left 70%](assets/platform-infra.excalidraw.png)
+
+# Pour gérer l'infrastructure
+
+## Ressource de type infrastucture
+
+- [Crossplane](https://www.crossplane.io/)
+- [AWS ACK Controller](https://aws.amazon.com/fr/blogs/containers/aws-controllers-for-kubernetes-ack/)
+- [GCP Config Connector](https://cloud.google.com/config-connector/docs/overview)
+
+## Resource de type interne à l'entreprise
+
+- Créer des définitions de ressource personnalisées
+- Créer des controlleurs personnalisées permettant de piloter des outils internes
+<!--(ex: renseigner une base de référence d'application à partir de resources de type déploiment) -->
+
+---
+
+![bg left 70%](assets/platform-monitoring.excalidraw.png)
+
+# Monitoring des applications
+
+- [Grafana](https://github.com/grafana/grafana)
+- [Dynatrace](https://www.crunchbase.com/organization/dynatrace-software)
+- [Datadog](https://www.crunchbase.com/organization/datadog)
+ 
+---
+
+![bg right 70%](assets/platform-logging.excalidraw.png)
+
+# Collecter les log de manière centrale
+
+- [Fluentd](https://github.com/fluent/fluentd)
+- [Loggie](https://github.com/loggie-io/loggie)
+
+---
+
+![bg left 70%](assets/platform-conformite.excalidraw.png)
+
+# Gestion centralisée de la conformité
+
+<!-- Réalisé au niveau de l'API via des webhooks -->
+
+Instrumenter la stack Kubernetes pour forcer la conformité :
+
+- [OPA Gatekeeper](https://github.com/open-policy-agent/gatekeeper) ([policy library](https://open-policy-agent.github.io/gatekeeper-library/website/allowedrepos)) 
+
+- [Kyverno](https://github.com/kyverno/kyverno) ([policy library](https://kyverno.io/policies/?policytypes=Deployment))
+
+---
+
+![bg right 70%](assets/platform-securite.excalidraw.png)
+
+# Gestion centralisée de la sécurité
+
+- [KubeArmor](https://github.com/kubearmor/kubearmor) : at the system level
+- [Trivy-Operator](https://github.com/aquasecurity/trivy-operator)
+  
+---
+
+![bg right 90%](assets/platform-end.excalidraw.png)
+
+# Les bénéfices
+
+---
+
+# Opérabilité
+
+- Une seul language pour gérer une multitude de problèmes (infrastructure, application, monitoring ...)
+- Une CLI commune à toutes les applications pour la recherche de problèmes
+- Des services standards utilisés par toutes les équipes
+
+---
+
+# Améliorer le temps de reprise après sinistre
+
+## Habituellement
+
+- un pipeline pour l'infrastructure
+- un pipeline pour l'applications
+
+## Avec Kubernetes comme plateforme
+
+- un pipeline pour déployer les **manifestes d'infrastructure et d'application**
+
+---
+
+# Move from push pipelines to pull pipelines
+
+- Amélioration de la sécurité
+- Scalabilité des chaînes de déploiement
+- Utilisation d'**outils GitOps** (Flux, Rancher Fleet, ArgoCD)
+
+---
+
+# Gestion des permissions
+
+- Simplification de la gestion des permissions des utilisateurs
+- Simplification de la gestion des permissions dans les pipelines
+
+---
+
+Developers should be able to deploy and run their apps and services end to end. “You build it, you run it”. True DevOps.
+
+---
+
+# Merci
+
+🐤 @ojacques2 @angegar
+
+
+
+---
+
 
 DevOps => Build it run it ship => problèmes => les PIZZA teams ne sont pas taillésp pour résoudre tous les problèmes d'opérations, d'infrastructure de compliance en plus de leur développement (CHARGE COGNITIVE) => Platform Engineering
 

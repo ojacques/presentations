@@ -37,7 +37,7 @@ footer: 'Ceci est du code. A forker depuis [github.com/ojacques/presentations](h
 ---
 
 <!-- _class: titleslide -->
-![bg](title.jpg)
+![bg](title2.jpg)
 
 # La documentation "comme du code"
 
@@ -73,7 +73,7 @@ Avec [MkDocs](https://www.mkdocs.org/) +
 ---
 
 <!-- _class: titleslide -->
-![bg](title.jpg)
+![bg](title2.jpg)
 
 # En pratique
 
@@ -175,7 +175,7 @@ HTML | PDF | DOCX | EPUB | MOBI | ...
 
 ---
 <!-- _class: titleslide -->
-![bg](title.jpg)
+![bg](title2.jpg)
 
 # Merci 🙏
 

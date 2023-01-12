@@ -407,6 +407,8 @@ Instrumenter la stack Kubernetes pour forcer la conformité :
 
 ---
 
+![bg right 99%](assets/pipelines.excalidraw.png)
+
 # Améliorer le temps de reprise après sinistre
 
 ## Habituellement

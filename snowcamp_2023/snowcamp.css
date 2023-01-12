@@ -31,3 +31,8 @@ section {
 .col h2 {
     text-align: center
 }
+
+.center img {
+    display: flex;
+    margin: auto;
+}

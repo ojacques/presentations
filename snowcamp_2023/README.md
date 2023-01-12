@@ -413,17 +413,39 @@ Instrumenter la stack Kubernetes pour forcer la conformité :
 
 ## Habituellement
 
+<!-- 
+- Cycle de vie infra séparé du cycle de vie de l'application
+- Packagé séparément
+- Utilise des languages différents => charge cognitive
+- Dépendance entre pipeline (ex: storage, database, DNS,...)
+ -->
+
 - un pipeline pour l'infrastructure
 - un pipeline pour l'applications
 
 ## Avec Kubernetes comme plateforme
 
-- un pipeline pour déployer les **manifestes d'infrastructure et d'application**
+<!--
+- K8s et sa capacité à être étendu via des controlleurs
+  résoud ces problèmes.
+
+-->
+- un pipeline pour déployer les **manifestes d'infrastructure et d'application** en parallèle.
+- atomicité du déploiement (application + infrastructure)
+- **universal control plane**
 
 ---
 
 # Move from push pipelines to pull pipelines
 
+<!--
+- sécurité:
+-   Sur un pipeline push les agents de l'orchestrateur ont souvent des droits étendus. Sur un pipeline pull, c'est l'environnement cible qui a des droits sur la CI.
+- Pipeline push scale mal à travers plusieurs clusters
+- YAML syntax permet d'utiliser le patterne app of app, ce qui permet de démarrer tout un cluster à partir d'un application bootstrap (mettre un example argocd)
+
+
+-->
 - Amélioration de la sécurité
 - Scalabilité des chaînes de déploiement
 - Utilisation d'**outils GitOps** (Flux, Rancher Fleet, ArgoCD)

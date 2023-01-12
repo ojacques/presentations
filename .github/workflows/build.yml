@@ -45,8 +45,6 @@ jobs:
       - uses: actions/checkout@master
       # https://github.com/marketplace/actions/markdown-link-check
       - uses: gaurav-nelson/github-action-markdown-link-check@v1
-        with:
-          folder-path: '*'
 
   StyleCheck:
     name: Style and Voice

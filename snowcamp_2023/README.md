@@ -119,22 +119,25 @@ Je voulais remettre ici cette citation de Dr Werner Vogels, CTO AWS. "You Build 
 
 # Build it, Ship it, Run it
 
-![Inside DevOps](assets/devops.excalidraw.png)
+<div class='center'>
+<img src=assets/devops.excalidraw.png height="150%"/>
+</div>
 
 ---
 
-## Problèmes
+# Problèmes
 
-![Pizza](https://pizzaanna.fr/wp-content/uploads/2020/10/002-pizza-1.png)
-![Pizza](https://pizzaanna.fr/wp-content/uploads/2020/10/002-pizza-1.png)
-
-Pas assez de ressources humaines
+<div class='center'>
+<img src=assets/pizzas.excalidraw.png />
+</div>
 
 ---
 
 # Solution
 
-![DevOps platform](assets/devopplatform.excalidraw.png)
+<div class='center'>
+<img src=assets/devopplatform.excalidraw.png height="130%"/>
+</div>
 
 ---
 
@@ -250,13 +253,18 @@ Les standards ne réduisent pas la créativité, mais ils la boostent. Se mettre
 
 Fournir une base de donnée "clé en main", n'est pas fournir une plateforme. C'est fournir un service.
 
-![Une plateforme](assets/platform.excalidraw.png)
+<div class='center'>
+<img src=assets/platform.excalidraw.png height="130%"/>
+</div>
 
 ---
 
 # Un service
 
-![Un service](assets/service.excalidraw.png)
+
+<div class='center'>
+<img src=assets/service.excalidraw.png />
+</div>
 
 - Intéragit avec des tickets
 - Responsabilité séparée

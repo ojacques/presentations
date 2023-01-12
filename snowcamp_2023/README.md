@@ -1,12 +1,18 @@
 ---
 marp: true
 theme: snowcamp2023
-
+style: |
+  section.titleslide h1 {
+    color: #ffffff;
+  }
+  section.titleslide h2 {
+    color: #ffffff;
+  }
 # header: 'This is code. Fork it on [github.com/ojacques](https://github.com/ojacques)'
 # footer: '© 2023, Amazon Web Services, Inc. or its Affiliates.'
 ---
 
-# Who are we?
+# 👋
 
 <div class="container">
 
@@ -28,7 +34,7 @@ Kubernetes evangelist
 
 ![drop-shadow:0,4px,10px,rgba(0,0,0,.4) width:300px](https://media.licdn.com/dms/image/D4E03AQFUu10C9Itf8A/profile-displayphoto-shrink_800_800/0/1668752660252?e=1678320000&v=beta&t=Hs8485uJGgD-VgmTWJfpv26crAxdVRFP-53wBBdBZGk)
 <!-- markdown-link-check-disable -->
-## [Olivier Jacques](https://www.linkedin.com/in/olivierjacques/)
+## [Olivier JACQUES](https://www.linkedin.com/in/olivierjacques/)
 <!-- markdown-link-check-enable -->
 
 <!--
@@ -67,7 +73,7 @@ Aujourd'hui, nous allons vous parler de plateformes. Pourquoi en créer, comment
 
 ---
 
-![bg 50%](assets/gartner-top-10-2023.png)
+![bg 58%](assets/gartner-top-10-2023.png)
 
 <!--
 
@@ -104,6 +110,8 @@ Essayons ici de faire le tri.
 - Kubernetes comme plateforme de base
 
 ---
+
+<!-- _class: titleslide -->
 ![bg](assets/werner.jpg)
 
 <br/><br/><br/><br/><br/><br/><br/>
@@ -120,24 +128,20 @@ Je voulais remettre ici cette citation de Dr Werner Vogels, CTO AWS. "You Build 
 # Build it, Ship it, Run it
 
 <div class='center'>
-<img src=assets/devops.excalidraw.png height="150%"/>
+<img src=assets/devops.excalidraw.png height="100%"/>
 </div>
 
 ---
 
-# Problèmes
+# 2 pizzas pour une équipe
 
-<div class='center'>
-<img src=assets/pizzas.excalidraw.png />
-</div>
+![Pizza](assets/pizzas.excalidraw.png)
 
 ---
 
-# Solution
+# Solution ?
 
-<div class='center'>
-<img src=assets/devopplatform.excalidraw.png height="130%"/>
-</div>
+![DevOps platform](assets/devopsplatform.excalidraw.png)
 
 ---
 

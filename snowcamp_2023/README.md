@@ -141,7 +141,7 @@ Je voulais remettre ici cette citation de Dr Werner Vogels, CTO AWS. "You Build 
 
 # Solution ?
 
-![DevOps platform](assets/devopplatform.excalidraw.png)
+![DevOps platform](assets/devopsplatform.excalidraw.png)
 
 ---
 

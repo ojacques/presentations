@@ -261,7 +261,6 @@ Fournir une base de donnée "clé en main", n'est pas fournir une plateforme. C'
 
 # Un service
 
-
 <div class='center'>
 <img src=assets/service.excalidraw.png />
 </div>
@@ -438,6 +437,7 @@ Instrumenter la stack Kubernetes pour forcer la conformité :
   résoud ces problèmes.
 
 -->
+
 - un pipeline pour déployer les **manifestes d'infrastructure et d'application** en parallèle.
 - atomicité du déploiement (application + infrastructure)
 - **universal control plane**
@@ -451,9 +451,8 @@ Instrumenter la stack Kubernetes pour forcer la conformité :
 -   Sur un pipeline push les agents de l'orchestrateur ont souvent des droits étendus. Sur un pipeline pull, c'est l'environnement cible qui a des droits sur la CI.
 - Pipeline push scale mal à travers plusieurs clusters
 - YAML syntax permet d'utiliser le patterne app of app, ce qui permet de démarrer tout un cluster à partir d'un application bootstrap (mettre un example argocd)
-
-
 -->
+
 - Amélioration de la sécurité
 - Scalabilité des chaînes de déploiement
 - Utilisation d'**outils GitOps** (Flux, Rancher Fleet, ArgoCD)

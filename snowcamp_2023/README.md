@@ -174,7 +174,7 @@ ChatGPT
 
 ## Définition 2 - Platform Engineering
 
-> "L'ingénierie des plates-formes est la discipline qui consiste à concevoir et à créer des chaînes d'outils et des flux de travail qui permettent aux organisations d'ingénierie logicielle de disposer de capacités en libre-service à l'ère du "cloud-native". Les ingénieurs de plate-forme fournissent un produit intégré, souvent appelé "plate-forme interne de développement", qui couvre les besoins opérationnels de l'ensemble du cycle de vie d'une application.
+> "L'ingénierie des plateformes est la discipline qui consiste à concevoir et à créer des chaînes d'outils et des flux de travail qui permettent aux organisations d'ingénierie logicielle de disposer de capacités en libre-service à l'ère du "cloud-native". Les ingénieurs de plateforme fournissent un produit intégré, souvent appelé "plateforme interne de développement", qui couvre les besoins opérationnels de l'ensemble du cycle de vie d'une application.
 
 [Luca Galante](https://platformengineering.org/blog/what-is-platform-engineering)
 
@@ -199,7 +199,7 @@ ChatGPT
 
 ![bg right 98%](assets/platform_auto.jpg)
 
-## Une platforme
+## Une plateforme
 
 - Fort investissement
 - Standardisation
@@ -303,7 +303,7 @@ AWS, K8s.
 
 ---
 
-# Kubernetes comme platforme framework
+# Kubernetes comme plateforme framework
 
 - Self service avec les Kubernetes API extensibles
 - Une approche déclarative

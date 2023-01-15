@@ -242,17 +242,6 @@ Les standards ne réduisent pas la créativité, mais ils la boostent. Se mettre
 - Responsabilité partagée (Inner Source)
 - Flexible et extensible
 
-<!-- 
----
-
-# Gérer sa plateforme comme un produit
-
-- Un Product Owner: la vision, les besoins des utilisateurs
-- Une équipe de développeurs
-- une feuille de route
-- des utilisateurs !
-
--->
 ---
 
 # ⚠️ Une plateforme n'est pas un service

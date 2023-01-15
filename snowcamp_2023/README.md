@@ -254,7 +254,7 @@ Fournir une base de donnée "clé en main", n'est pas fournir une plateforme. C'
 
 ---
 
-# Un service
+# Un service (pas certain de ce slide contre ex: SaaS)
 
 <div class='center'>
 <img src=assets/service.excalidraw.png />
@@ -291,23 +291,33 @@ Fournir une base de donnée "clé en main", n'est pas fournir une plateforme. C'
 
 # Kubernetes comme plateforme framework
 
-- Self service avec les Kubernetes API extensibles
-- Une approche déclarative
-- Bénéficie d'un écosystème très large permettant le monitoring, l'observabilité, la sécurité
+<!--
 !!!! - Permet de changer le paradigme de pipeline (push pipeline devient pull pipeline) !!!!
+- Bénéficie d'un écosystème très large permettant le monitoring, l'observabilité, la sécurité
+
+
+-->
+
+- Possède des qualités intrinsèques tel que
+  -  self service avec ses APIs
+  -  self-healing
+  -  robustness
+- Simple d'utilisation grace à une approche déclarative
 - Extensible par nature avec les controlleurs et les définitions de ressource personnalisé
-- Robustness and self-healing
 
 ---
 
 # Qu'est ce qu'un controlleur Kubernetes
 
-**Un controlleur traque un type de ressource définissant un état afin de modifier la plateforme pour atteindre l'état désiré.**
+**Un controlleur traque un type de ressource définissant un état souhaité afin de faire converger la plateform vers cet état.**
 
 Et si les ressources étaient de type infrastructure ou encore des applications internes à l'entreprise.
 
 ---
 
+<!--
+Présentation de l'écosystème qui fait de k8s un outil de choix pour réaliser une plateformz
+-->
 ![bg left 70%](assets/platform-ci.excalidraw.png)
 
 # As CI / CD plateform

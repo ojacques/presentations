@@ -9,7 +9,7 @@ style: |
     color: #ffffff;
   }
 # header: 'This is code. Fork it on [github.com/ojacques](https://github.com/ojacques)'
-# footer: '© 2023, Amazon Web Services, Inc. or its Affiliates.'
+footer: '🐤 [@ojacques2](https://twitter.com/ojacques2), 🐤 [@angegar](https://twitter.com/angegar)'
 ---
 
 # 👋
@@ -226,12 +226,12 @@ Les standards ne réduisent pas la créativité, mais ils la boostent. Se mettre
 
 ---
 
-![bg 90%](assets/team_topologies.png)
+![bg 110%](assets/team_topologies.png)
 ![bg 60%](assets/team_topologies_book.jpg)
 
 ---
 
-# Reussir une plateforme
+# Réussir une plateforme
 
 ---
 
@@ -242,6 +242,7 @@ Les standards ne réduisent pas la créativité, mais ils la boostent. Se mettre
 - Responsabilité partagée (Inner Source)
 - Flexible et extensible
 
+<!-- 
 ---
 
 # Gérer sa plateforme comme un produit
@@ -251,6 +252,7 @@ Les standards ne réduisent pas la créativité, mais ils la boostent. Se mettre
 - une feuille de route
 - des utilisateurs !
 
+-->
 ---
 
 # ⚠️ Une plateforme n'est pas un service
@@ -280,12 +282,7 @@ Fournir une base de donnée "clé en main", n'est pas fournir une plateforme. C'
 
 # Construire une plateforme au dessus d'une autre
 
-AWS, K8s.
-
----
-
-![bg 60%](assets/team_topologies_book.jpg)
-![bg 60%](assets/platform_strategy.png)
+## AWS, Kubernetes
 
 ---
 
@@ -471,6 +468,13 @@ Instrumenter la stack Kubernetes pour forcer la conformité :
 ---
 
 Developers should be able to deploy and run their apps and services end to end. “You build it, you run it”. True DevOps.
+
+---
+
+# Littérature
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+![bg 50%](assets/team_topologies_book.jpg)
+![bg 50%](assets/platform_strategy.png)
 
 ---
 

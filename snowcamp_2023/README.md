@@ -411,6 +411,7 @@ Instrumenter la stack Kubernetes pour forcer la conformité :
 - Une seul language pour gérer une multitude de problèmes (infrastructure, application, monitoring ...)
 - Une CLI commune à toutes les applications pour la recherche de problèmes
 - Des services standards utilisés par toutes les équipes
+- Portables à travers les clouds providers
 
 ---
 

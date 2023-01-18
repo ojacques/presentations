@@ -417,7 +417,7 @@ Instrumenter la stack Kubernetes pour forcer la conformité :
 
 # Améliorer le temps de reprise après sinistre
 
-### Habituellement
+## Habituellement
 
 <!-- 
 - Cycle de vie infra séparé du cycle de vie de l'application
@@ -429,7 +429,7 @@ Instrumenter la stack Kubernetes pour forcer la conformité :
 - un pipeline pour l'infrastructure
 - un pipeline pour l'applications
 
-### Avec Kubernetes comme plateforme
+## Avec Kubernetes comme plateforme
 
 <!--
 - K8s et sa capacité à être étendu via des controlleurs

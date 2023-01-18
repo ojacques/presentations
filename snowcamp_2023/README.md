@@ -12,6 +12,26 @@ style: |
 footer: '🐤 [@ojacques2](https://twitter.com/ojacques2), 🐤 [@angegar](https://twitter.com/angegar)'
 ---
 
+# Platform Engineering
+
+## Lorsque Kubernetes devient la clé du royaume
+
+## Snowcamp 2023
+
+Laurent Gil - ATOS  
+Olivier Jacques - AWS
+
+<!--
+Intro:
+Bonjour à tous. Vous êtes ici parce que : 
+- vous voulez comprendre ce qu'est le platform engineering, pourquoi, et comment le mettre en place ? Vous êtes dans la bonne salle.
+- vous créez des plateforme, et que vous aimeriez bien que tout cela suive les bonne pratiques d'ingénierie. Vous êtes dans la bonne salle
+- Vous cherchez à savoir pourquoi Kubernetes est une magnifique plateforme de plateformes. Vous êtes dans la bonne salle.
+- Vous pensez vous êtes trompé de salle. Restez quand même, j'ai des bonbons Kréma pour ceux qui répondent à nos questions.
+
+- -->
+
+---
 # 👋
 
 <div class="container">
@@ -21,7 +41,7 @@ footer: '🐤 [@ojacques2](https://twitter.com/ojacques2), 🐤 [@angegar](https
 ![drop-shadow:0,5px,10px,rgba(0,0,0,.4) width:300px](https://media.licdn.com/dms/image/C4D03AQHAHQ3ml3xL2g/profile-displayphoto-shrink_800_800/0/1606292311924?e=1678320000&v=beta&t=C1uIawGRh8n7iVepZ48qTh0VZVZTHaZ1gCplRdcNcmk)
 
 <!-- markdown-link-check-disable -->
-## [Laurent GIL](https://www.linkedin.com/in/laurent-gil/?locale=en_US)
+## [Laurent GIL](https://www.linkedin.com/in/laurent-gil/)
 <!-- markdown-link-check-enable -->
 
 DevOps Coach,
@@ -52,32 +72,11 @@ AWS
 
 ---
 
-# Platform Engineering
-
-## Lorsque Kubernetes devient la clé du royaume
-
-## Snowcamp 2023
-
-Laurent Gil - ATOS  
-Olivier Jacques - AWS
-
-<!--
-Je m'appelle Olivier Jacques, je suis consultant DevOps senior à AWS ProServe. Je suis également membre de l'AWS User Group Grenoble.
-
-<Laurent>
-
-Laurent et moi, nous avons une bonne expérience de mise en place de plateformes. Nous avons notamment fortemment contribué à une plateforme d'entreprise qui a eu jusqu'à 30,000 utilisateurs: une plateforme complète de CI/CD.
-
-Aujourd'hui, nous allons vous parler de plateformes. Pourquoi en créer, comment s'assurer qu'elles soient utilisées, comment les faire évoluer, et aussi une approche pour les construire en utilisant Kubernetes.
--->
-
----
-
 ![bg 58%](assets/gartner-top-10-2023.png)
 
 <!--
 
-Si vous êtes ici, c'est que le Platform Engineering vous intéresse. Et c'est vrai, Gartner a listé Platform Engineering comme l'une des tendances majeures pour 2023.
+SGartner a listé Platform Engineering comme l'une des tendances majeures pour 2023.
 
 -->
 
@@ -254,7 +253,7 @@ Fournir une base de donnée "clé en main", n'est pas fournir une plateforme. C'
 
 ---
 
-# Un service
+# Un service (pas certain de ce slide contre ex: SaaS)
 
 <div class='center'>
 <img src=assets/service.excalidraw.png />
@@ -291,23 +290,32 @@ Fournir une base de donnée "clé en main", n'est pas fournir une plateforme. C'
 
 # Kubernetes comme plateforme framework
 
-- Self service avec les Kubernetes API extensibles
-- Une approche déclarative
-- Bénéficie d'un écosystème très large permettant le monitoring, l'observabilité, la sécurité
+<!--
 !!!! - Permet de changer le paradigme de pipeline (push pipeline devient pull pipeline) !!!!
+- Bénéficie d'un écosystème très large permettant le monitoring, l'observabilité, la sécurité
+
+-->
+
+- Possède des qualités intrinsèques tel que
+  - self service avec ses APIs
+  - self-healing
+  - robustness
+- Simple d'utilisation grace à une approche déclarative
 - Extensible par nature avec les controlleurs et les définitions de ressource personnalisé
-- Robustness and self-healing
 
 ---
 
 # Qu'est ce qu'un controlleur Kubernetes
 
-**Un controlleur traque un type de ressource définissant un état afin de modifier la plateforme pour atteindre l'état désiré.**
+**Un controlleur traque un type de ressource définissant un état souhaité afin de faire converger la plateform vers cet état.**
 
 Et si les ressources étaient de type infrastructure ou encore des applications internes à l'entreprise.
 
 ---
 
+<!--
+Présentation de l'écosystème qui fait de k8s un outil de choix pour réaliser une plateformz
+-->
 ![bg left 70%](assets/platform-ci.excalidraw.png)
 
 # As CI / CD plateform
@@ -401,6 +409,7 @@ Instrumenter la stack Kubernetes pour forcer la conformité :
 - Une seul language pour gérer une multitude de problèmes (infrastructure, application, monitoring ...)
 - Une CLI commune à toutes les applications pour la recherche de problèmes
 - Des services standards utilisés par toutes les équipes
+- Portables à travers les clouds providers
 
 ---
 
@@ -428,11 +437,13 @@ Instrumenter la stack Kubernetes pour forcer la conformité :
 
 -->
 
-- un pipeline pour déployer les **manifestes d'infrastructure et d'application** en parallèle.
-- atomicité du déploiement (application + infrastructure)
+- un seul pipeline pour l'**infrastructure + application**.
+- atomicité du déploiement
 - **universal control plane**
 
 ---
+
+![bg left 90%](assets/pullpipeline.excalidraw.png)
 
 # Move from push pipelines to pull pipelines
 
@@ -464,6 +475,10 @@ Developers should be able to deploy and run their apps and services end to end. 
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 ![bg 50%](assets/team_topologies_book.jpg)
 ![bg 50%](assets/platform_strategy.png)
+
+---
+
+![Sponsors bg 100%](assets/sponsors.drawio.png)
 
 ---
 

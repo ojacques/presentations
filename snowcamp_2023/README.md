@@ -467,6 +467,10 @@ Developers should be able to deploy and run their apps and services end to end. 
 
 ---
 
+![Sponsors bg 100%](assets/sponsors.drawio.png)
+
+---
+
 # Merci
 
 🐤 @ojacques2 @angegar

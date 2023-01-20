@@ -144,7 +144,19 @@ Je voulais remettre ici cette citation de Dr Werner Vogels, CTO AWS. "You Build 
 
 # 2 pizzas pour une équipe
 
-![Pizza](assets/pizza.excalidraw.png)
+![Pizza 1](assets/pizza1.excalidraw.png)
+
+---
+
+# 2 pizzas pour une équipe
+
+![Pizza 2](assets/pizza2.excalidraw.png)
+
+---
+
+# 2 pizzas pour une équipe
+
+![Pizza 3](assets/pizza3.excalidraw.png)
 
 ---
 
@@ -155,6 +167,10 @@ Je voulais remettre ici cette citation de Dr Werner Vogels, CTO AWS. "You Build 
 ---
 
 # Les plateformes
+
+<div class='center'>
+<img src=assets/platform_auto.jpg />
+</div>
 
 <!--
 Les plateformes ne sont pas nouvelles. Par exemple, dans le monde de l'automobile, les plateformes ont révolutionné la façon dont les constructeurs automobiles développent et commercialisent leurs véhicules.
@@ -178,38 +194,6 @@ Peter Gillard-Moss, ThoughtWorks
 > "L'ingénierie des plateformes est la discipline qui consiste à concevoir et à créer des chaînes d'outils et des flux de travail qui permettent aux organisations d'ingénierie logicielle de disposer de capacités en libre-service à l'ère du "cloud-native". Les ingénieurs de plateforme fournissent un produit intégré, souvent appelé "plateforme interne de développement", qui couvre les besoins opérationnels de l'ensemble du cycle de vie d'une application.
 
 [Luca Galante](https://platformengineering.org/blog/what-is-platform-engineering)
-
----
-
-![bg right 98%](assets/platform_auto.jpg)
-
-## Une plateforme, des véhicules
-
-- Nissan Cube
-- Nissan Micra (K12)
-- Renault Captur
-- Renault Clio III
-- Renault Clio IV[4]
-- Renault Modus
-- Renault Wind
-- Renault Zoe
-- Nissan Bluebird Sylphy (G11)
-- ...
-
----
-
-![bg right 98%](assets/platform_auto.jpg)
-
-## Une plateforme
-
-- Fort investissement
-- Standardisation
-
-## Des produits
-
-- Investissement minimums
-- Usages diverses
-- Différentientes
 
 ---
 
@@ -245,17 +229,20 @@ Les standards ne réduisent pas la créativité, mais ils la boostent. Se mettre
 
 ---
 
-# ⚠️ Une plateforme n'est pas un service
-
-Fournir une base de donnée "clé en main", n'est pas fournir une plateforme. C'est fournir un service.
+# Une plateforme
 
 <div class='center'>
 <img src=assets/platform.excalidraw.png height="130%"/>
 </div>
 
+<br/><br/>
+⚠️ Une plateforme n'est pas un service
+
+> Fournir une base de donnée "clé en main", n'est pas fournir une plateforme. C'est fournir un service.
+
 ---
 
-# Un service (pas certain de ce slide contre ex: SaaS)
+# Un service
 
 <div class='center'>
 <img src=assets/service.excalidraw.png />
@@ -450,7 +437,7 @@ Instrumenter la stack Kubernetes pour forcer la conformité :
 
 ![bg left 90%](assets/pullpipeline.excalidraw.png)
 
-# Move from push pipelines to pull pipelines
+# Passer des pipelines push au pull
 
 <!--
 - sécurité:
@@ -477,9 +464,10 @@ Developers should be able to deploy and run their apps and services end to end. 
 ---
 
 # Littérature
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-![bg 50%](assets/team_topologies_book.jpg)
-![bg 50%](assets/platform_strategy.png)
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+![drop-shadow:0,4px,10px,rgba(0,0,0,.4) width:300px bg 50%](assets/team_topologies_book.jpg)
+![drop-shadow:0,4px,10px,rgba(0,0,0,.4) width:300px bg 50%](assets/platform_strategy.png)
 
 ---
 

@@ -82,6 +82,14 @@ SGartner a listé Platform Engineering comme l'une des tendances majeures pour 2
 
 ---
 
+# Cycle de l'effervescence [Gartner]([ff](https://www.gartner.com/interactive/hc/4017202))
+
+<div class='center'>
+<img src=assets/gartner-hype-cycle.jpg height="100%"/>
+</div>
+
+---
+
 # DevOps est ☠️ ?
 
 ## 🤴🐉🏰⚔️
@@ -392,6 +400,7 @@ Instrumenter la stack Kubernetes pour forcer la conformité :
 
 - Créer des définitions de ressource personnalisées
 - Créer des controlleurs personnalisées permettant de piloter des outils internes
+
 <!--
 (ex: renseigner une base de référence d'application à partir de resources de type déploiment) 
 -->

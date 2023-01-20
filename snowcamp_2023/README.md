@@ -82,7 +82,9 @@ SGartner a listé Platform Engineering comme l'une des tendances majeures pour 2
 
 ---
 
+<!-- markdown-link-check-disable -->
 # Cycle de l'effervescence [Gartner]([ff](https://www.gartner.com/interactive/hc/4017202))
+<!-- markdown-link-check-enable -->
 
 <div class='center'>
 <img src=assets/gartner-hype-cycle.jpg height="100%"/>

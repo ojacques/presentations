@@ -82,6 +82,16 @@ SGartner a listé Platform Engineering comme l'une des tendances majeures pour 2
 
 ---
 
+<!-- markdown-link-check-disable -->
+# Cycle de l'effervescence [Gartner]([ff](https://www.gartner.com/interactive/hc/4017202))
+<!-- markdown-link-check-enable -->
+
+<div class='center'>
+<img src=assets/gartner-hype-cycle.jpg height="100%"/>
+</div>
+
+---
+
 # DevOps est ☠️ ?
 
 ## 🤴🐉🏰⚔️
@@ -134,7 +144,7 @@ Je voulais remettre ici cette citation de Dr Werner Vogels, CTO AWS. "You Build 
 
 # 2 pizzas pour une équipe
 
-![Pizza](assets/pizzas.excalidraw.png)
+![Pizza](assets/pizza.excalidraw.png)
 
 ---
 
@@ -163,15 +173,7 @@ Peter Gillard-Moss, ThoughtWorks
 
 ---
 
-## Définition 1 - Platform Engineering
-
-> "Le "Platform Engineering" concerne la création et la maintenance de plateformes informatiques pour héberger des applications et des services en ligne. Cette discipline vise à améliorer l'efficacité et la flexibilité des processus de développement et de déploiement de logiciels."
-
-ChatGPT
-
----
-
-## Définition 2 - Platform Engineering
+## Définition - Platform Engineering
 
 > "L'ingénierie des plateformes est la discipline qui consiste à concevoir et à créer des chaînes d'outils et des flux de travail qui permettent aux organisations d'ingénierie logicielle de disposer de capacités en libre-service à l'ère du "cloud-native". Les ingénieurs de plateforme fournissent un produit intégré, souvent appelé "plateforme interne de développement", qui couvre les besoins opérationnels de l'ensemble du cycle de vie d'une application.
 
@@ -342,17 +344,9 @@ Présentation de l'écosystème qui fait de k8s un outil de choix pour réaliser
 
 # Pour gérer l'infrastructure
 
-## Ressource de type infrastucture
-
 - [Crossplane](https://www.crossplane.io/)
 - [AWS ACK Controller](https://aws.amazon.com/fr/blogs/containers/aws-controllers-for-kubernetes-ack/)
 - [GCP Config Connector](https://cloud.google.com/config-connector/docs/overview)
-
-## Resource de type interne à l'entreprise
-
-- Créer des définitions de ressource personnalisées
-- Créer des controlleurs personnalisées permettant de piloter des outils internes
-<!--(ex: renseigner une base de référence d'application à partir de resources de type déploiment) -->
 
 ---
 
@@ -404,11 +398,22 @@ Instrumenter la stack Kubernetes pour forcer la conformité :
 
 ---
 
+# Facilité d'intégration avec des outils internes
+
+- Créer des définitions de ressource personnalisées
+- Créer des controlleurs personnalisées permettant de piloter des outils internes
+
+<!--
+(ex: renseigner une base de référence d'application à partir de resources de type déploiment) 
+-->
+
+---
+
 # Opérabilité
 
 - Une seul language pour gérer une multitude de problèmes (infrastructure, application, monitoring ...)
 - Une CLI commune à toutes les applications pour la recherche de problèmes
-- Des services standards utilisés par toutes les équipes
+- Des fonctionnalités standards utilisés par toutes les équipes
 - Portables à travers les clouds providers
 
 ---
@@ -485,14 +490,3 @@ Developers should be able to deploy and run their apps and services end to end. 
 # Merci
 
 🐤 @ojacques2 @angegar
-
----
-
-DevOps => Build it run it ship => problèmes => les PIZZA teams ne sont pas taillésp pour résoudre tous les problèmes d'opérations, d'infrastructure de compliance en plus de leur développement (CHARGE COGNITIVE) => Platform Engineering
-
-- Une plateforme commune et un langage commun pour les équipes DevOps et l'équipe Plateform Engineering (Infrastructure)
-
-- authentification
-- authorization
-- fournit des services de base:
-  - monitoring

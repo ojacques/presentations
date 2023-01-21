@@ -307,18 +307,18 @@ Présentation de l'écosystème qui fait de k8s un outil de choix pour réaliser
 -->
 ![bg left 70%](assets/platform-ci.excalidraw.png)
 
-# As CI / CD plateform
+# Pour la CI / CD
 
-- Run CI
-  - JenkinsX /
+- CI
+  - JenkinsX
   - Tekton
-- Run CD
+- CD
   - ArgoCD
   - Flux
 
 ---
 
-![bg right 70%](assets/platform-test.excalidraw.png)
+![bg left 70%](assets/platform-test.excalidraw.png)
 
 # Comme plateforme de test
 
@@ -347,7 +347,7 @@ Présentation de l'écosystème qui fait de k8s un outil de choix pour réaliser
 
 ---
 
-![bg right 70%](assets/platform-logging.excalidraw.png)
+![bg left 70%](assets/platform-logging.excalidraw.png)
 
 # Collecter les log de manière centrale
 
@@ -370,7 +370,7 @@ Instrumenter la stack Kubernetes pour forcer la conformité :
 
 ---
 
-![bg right 70%](assets/platform-securite.excalidraw.png)
+![bg left 70%](assets/platform-securite.excalidraw.png)
 
 # Gestion centralisée de la sécurité
 

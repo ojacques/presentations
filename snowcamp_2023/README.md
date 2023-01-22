@@ -463,8 +463,6 @@ Instrumenter la stack Kubernetes pour forcer la conformité :
 - Packagé séparément
 - Utilise des languages différents => charge cognitive
 - Dépendance entre pipeline (ex: storage, database, DNS,...)
-
-
 - un pipeline pour l'infrastructure
 - un pipeline pour l'applications
 

@@ -4,19 +4,44 @@ theme: snowcamp2023
 style: |
   section.titleslide h1 {
     color: #ffffff;
+    position: absolute;
+    top: 100px;
+    left: 400px;
+    font-size: 100px;
   }
   section.titleslide h2 {
     color: #ffffff;
+    position: absolute;
+    top: 200px;
+    left: 400px;
+    font-size: 50px;
+  }
+  section.titleslide p {
+    color: #494c6f;
+    margin: -400px 0 0 320px;
+    font-size: 50px;
+  }
+  section.dividerslide h1 {
+    color: #ffffff;
+    margin-left: 100px;
+    font-size: 100px;
+  }
+  section.dividerslide h2 {
+    color: #ffffff;
+    margin-left: 100px;
+    font-size: 50px;
   }
 # header: 'This is code. Fork it on [github.com/ojacques](https://github.com/ojacques)'
 footer: '🐤 [@ojacques2](https://twitter.com/ojacques2), 🐤 [@angegar](https://twitter.com/angegar)'
 ---
 
+![bg](assets/sc_bg_title.jpg)
+
+<!-- _class: titleslide -->
+
 # Platform Engineering
 
 ## Lorsque Kubernetes devient la clé du royaume
-
-## Snowcamp 2023
 
 Laurent Gil - ATOS  
 Olivier Jacques - AWS
@@ -32,10 +57,7 @@ Bonjour à tous. Vous êtes ici parce que :
 - -->
 
 ---
-# 👋
-
 <div class="container">
-
 <div class="col">
 
 ![drop-shadow:0,5px,10px,rgba(0,0,0,.4) width:300px](https://media.licdn.com/dms/image/C4D03AQHAHQ3ml3xL2g/profile-displayphoto-shrink_800_800/0/1606292311924?e=1678320000&v=beta&t=C1uIawGRh8n7iVepZ48qTh0VZVZTHaZ1gCplRdcNcmk)
@@ -72,7 +94,7 @@ AWS
 
 ---
 
-![bg 58%](assets/gartner-top-10-2023.png)
+![bg 50%](assets/gartner-top-10-2023.png)
 
 <!--
 
@@ -83,20 +105,18 @@ SGartner a listé Platform Engineering comme l'une des tendances majeures pour 2
 ---
 
 <!-- markdown-link-check-disable -->
-# Cycle de l'effervescence [Gartner]([ff](https://www.gartner.com/interactive/hc/4017202))
+# Cycle de l'effervescence [Gartner](https://www.gartner.com/interactive/hc/4017202)
 <!-- markdown-link-check-enable -->
 
 <div class='center'>
-<img src=assets/gartner-hype-cycle.jpg height="100%"/>
+<img src=assets/gartner-hype-cycle.jpg width=75%/>
 </div>
 
 ---
 
 # DevOps est ☠️ ?
 
-## 🤴🐉🏰⚔️
-
-![bg right 70% ](assets/tweet_devops_is_dead.jpg)
+![bg right 60% ](assets/tweet_devops_is_dead.jpg)
 
 <!--
 Récemment, j'ai vu passer un (des) tweet(s) disant que DevOps était mort. Je ne sais pas si c'est vrai ou non, mais je sais que le DevOps n'est pas mort. Il est juste en train de changer.
@@ -120,7 +140,7 @@ Essayons ici de faire le tri.
 
 ---
 
-<!-- _class: titleslide -->
+<!-- _class: dividerslide -->
 ![bg](assets/werner.jpg)
 
 <br/><br/><br/><br/><br/><br/><br/>
@@ -134,42 +154,50 @@ Je voulais remettre ici cette citation de Dr Werner Vogels, CTO AWS. "You Build 
 
 ---
 
-# Build it, Ship it, Run it
+# "You build it, you run it" - cela veut dire quoi ?
 
 <div class='center'>
-<img src=assets/devops.excalidraw.png height="100%"/>
+<img src=assets/devops.excalidraw.png width="80%"/>
 </div>
 
 ---
 
 # 2 pizzas pour une équipe
 
-![Pizza 1](assets/pizza1.excalidraw.png)
+<div class='center'>
+<img src=assets/pizza1.excalidraw.png width=50% />
+</div>
 
 ---
 
 # 2 pizzas pour une équipe
 
-![Pizza 2](assets/pizza2.excalidraw.png)
+<div class='center'>
+<img src=assets/pizza2.excalidraw.png width=70% />
+</div>
 
 ---
 
 # 2 pizzas pour une équipe
 
-![Pizza 3](assets/pizza3.excalidraw.png)
+<div class='center'>
+<img src=assets/pizza3.excalidraw.png width=50% />
+</div>
 
 ---
 
 # Solution ?
 
-![DevOps platform](assets/devopsplatform.excalidraw.png)
+<div class='center'>
+<img src=assets/devopsplatform.excalidraw.png width=60% />
+</div>
 
 ---
 
 # Les plateformes
 
 <div class='center'>
-<img src=assets/platform_auto.jpg />
+<img src=assets/platform_auto.jpg width=70% />
 </div>
 
 <!--
@@ -189,7 +217,7 @@ Peter Gillard-Moss, ThoughtWorks
 
 ---
 
-## Définition - Platform Engineering
+# Définition - Platform Engineering
 
 > "L'ingénierie des plateformes est la discipline qui consiste à concevoir et à créer des chaînes d'outils et des flux de travail qui permettent aux organisations d'ingénierie logicielle de disposer de capacités en libre-service à l'ère du "cloud-native". Les ingénieurs de plateforme fournissent un produit intégré, souvent appelé "plateforme interne de développement", qui couvre les besoins opérationnels de l'ensemble du cycle de vie d'une application.
 
@@ -212,10 +240,13 @@ Les standards ne réduisent pas la créativité, mais ils la boostent. Se mettre
 ---
 
 ![bg 110%](assets/team_topologies.png)
-![bg 60%](assets/team_topologies_book.jpg)
+![bg drop-shadow:0,4px,10px,rgba(0,0,0,.4) 55%](assets/team_topologies_book.jpg)
 
 ---
 
+![bg](assets/sc_bg_title.jpg)
+
+<!-- _class: titleslide -->
 # Réussir une plateforme
 
 ---
@@ -245,33 +276,40 @@ Les standards ne réduisent pas la créativité, mais ils la boostent. Se mettre
 # Un service
 
 <div class='center'>
-<img src=assets/service.excalidraw.png />
+<img src=assets/service.excalidraw.png height=130% />
 </div>
 
-- Intéragit avec des tickets
-- Responsabilité séparée
-- Goulot d'étranglement
-- Peu d'évolution
-- Pas d'extension
-- Pas le choix d'adopter ou pas le service.
+<div class="container">
+<div class="col">
+
+Intéragit avec des tickets
+Responsabilité séparée
+Goulot d'étranglement
+
+</div>
+<div class="col">
+
+Peu d'évolution
+Pas d'extension
+Pas le choix d'adopter ou pas le service
+
+</div>
 
 ---
 
-# Construire une plateforme au dessus d'une autre
+![bg](assets/sc_bg_divider.jpg)
 
-## AWS, Kubernetes
-
----
-
-# Une implémentation à base de Kubernetes
+<!-- _class: titleslide -->
+# Construire une plateforme
+## avec Kubernetes
 
 ---
 
 # A propos de Kubernetes
 
-📖 Kubernetes est une plate-forme open-source extensible et portable pour la gestion de charges de travail (workloads) et de services conteneurisés📖
+📖 Kubernetes est une plateforme open source extensible et portable pour la gestion de charges de travail (workloads) et de services conteneurisés📖
 
-📖 Kubernetes a également été conçu pour servir de plate-forme et favoriser la construction d’un écosystème de composants et d’outils facilitant le déploiement, la mise à l’échelle et la gestion des applications.📖
+📖 Kubernetes a également été conçu pour servir de plateforme et favoriser la construction d’un écosystème de composants et d’outils facilitant le déploiement, la mise à l’échelle et la gestion des applications.📖
 
 [source](https://kubernetes.io/fr/docs/concepts/overview/what-is-kubernetes/)
 
@@ -379,7 +417,9 @@ Instrumenter la stack Kubernetes pour forcer la conformité :
   
 ---
 
-![bg right 90%](assets/platform-end.excalidraw.png)
+![bg](assets/sc_bg_title.jpg)
+
+<!-- _class: titleslide -->
 
 # Les bénéfices
 
@@ -457,17 +497,17 @@ Instrumenter la stack Kubernetes pour forcer la conformité :
 - Simplification de la gestion des permissions des utilisateurs
 - Simplification de la gestion des permissions dans les pipelines
 
----
-
+<!--
 Developers should be able to deploy and run their apps and services end to end. “You build it, you run it”. True DevOps.
+-->
 
 ---
 
 # Littérature
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
-![drop-shadow:0,4px,10px,rgba(0,0,0,.4) width:300px bg 50%](assets/team_topologies_book.jpg)
-![drop-shadow:0,4px,10px,rgba(0,0,0,.4) width:300px bg 50%](assets/platform_strategy.png)
+![drop-shadow:0,4px,10px,rgba(0,0,0,.4) bg 40%](assets/team_topologies_book.jpg)
+![drop-shadow:0,4px,10px,rgba(0,0,0,.4) bg 40%](assets/platform_strategy.png)
 
 ---
 
@@ -475,6 +515,14 @@ Developers should be able to deploy and run their apps and services end to end. 
 
 ---
 
+![bg](assets/sc_bg_end.jpg)
+
+<!-- _class: titleslide -->
+
 # Merci
 
-🐤 @ojacques2 @angegar
+## 🐤 @ojacques2 🐤 @angegar
+
+<br/><br/><br/><br/><br/><br/><br/><br/>
+
+![QR code](assets/qr_code.png)

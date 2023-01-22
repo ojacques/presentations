@@ -244,7 +244,7 @@ Les standards ne réduisent pas la créativité, mais ils la boostent. Se mettre
 
 ---
 
-![bg](assets/sc_bg_title.jpg)
+![bg](assets/sc_bg_divider.jpg)
 
 <!-- _class: titleslide -->
 # Réussir une plateforme
@@ -417,11 +417,11 @@ Instrumenter la stack Kubernetes pour forcer la conformité :
   
 ---
 
-![bg](assets/sc_bg_title.jpg)
+![bg](assets/sc_bg_divider.jpg)
 
 <!-- _class: titleslide -->
 
-# Les bénéfices
+# Bénéfices d'une plateforme
 
 ---
 

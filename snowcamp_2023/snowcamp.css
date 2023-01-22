@@ -3,12 +3,12 @@
 @import 'default';
 
 section {
-    width: 1280px;
-    height: 960px;
-    background: rgb(255, 255, 255) url(./assets/banner.jpg) no-repeat;
-    background-size: 1280px;
+    width: 1920px;
+    height: 1080px;
+    background: rgb(255, 255, 255) url(./assets/sc_banner.jpg) no-repeat;
+    background-size: 1920px;
     font-family: "Arial Rounded MT", "Helvetica Rounded", Arial, "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 20pt;
+    font-size: 28pt;
     color: #222;
     padding-top: 200px;
 }

@@ -315,6 +315,8 @@ Pas le choix d'adopter ou pas le service
 
 ---
 
+![bg right 100%](assets/k8sasplatform.excalidraw.png)
+
 # Kubernetes comme plateforme framework
 
 <!--
@@ -332,11 +334,15 @@ Pas le choix d'adopter ou pas le service
 
 ---
 
+![bg left 100%](assets/k8scontroller.excalidraw.png)
+
 # Qu'est ce qu'un controlleur Kubernetes
 
 **Un controlleur traque un type de ressource définissant un état souhaité afin de faire converger la plateform vers cet état.**
 
+<!--
 Et si les ressources étaient de type infrastructure ou encore des applications internes à l'entreprise.
+-->
 
 ---
 
@@ -445,33 +451,30 @@ Instrumenter la stack Kubernetes pour forcer la conformité :
 
 ---
 
-![bg right 99%](assets/pipelines.excalidraw.png)
+![bg right:65% 100%](assets/pipelines.excalidraw.png)
 
 # Améliorer le temps de reprise après sinistre
 
-## Habituellement
+<!--
 
-<!-- 
+## Habituellement
+ 
 - Cycle de vie infra séparé du cycle de vie de l'application
 - Packagé séparément
 - Utilise des languages différents => charge cognitive
 - Dépendance entre pipeline (ex: storage, database, DNS,...)
- -->
-
 - un pipeline pour l'infrastructure
 - un pipeline pour l'applications
 
 ## Avec Kubernetes comme plateforme
 
-<!--
 - K8s et sa capacité à être étendu via des controlleurs
   résoud ces problèmes.
-
--->
-
 - un seul pipeline pour l'**infrastructure + application**.
 - atomicité du déploiement
 - **universal control plane**
+
+-->
 
 ---
 
@@ -486,20 +489,16 @@ Instrumenter la stack Kubernetes pour forcer la conformité :
 - YAML syntax permet d'utiliser le patterne app of app, ce qui permet de démarrer tout un cluster à partir d'un application bootstrap (mettre un example argocd)
 -->
 
-- Amélioration de la sécurité
+- Amélioration de la sécurité (gestion des permissions)
 - Scalabilité des chaînes de déploiement
 - Utilisation d'**outils GitOps** (Flux, Rancher Fleet, ArgoCD)
 
 ---
-
-# Gestion des permissions
-
-- Simplification de la gestion des permissions des utilisateurs
-- Simplification de la gestion des permissions dans les pipelines
-
 <!--
 Developers should be able to deploy and run their apps and services end to end. “You build it, you run it”. True DevOps.
 -->
+
+Les développeurs devraient être capable de déployer et d'opérer leurs applications et services de bout en bout. "Tu le crées, tu l'opères". C'est le vrai DevOps.
 
 ---
 

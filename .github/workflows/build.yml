@@ -104,10 +104,10 @@ jobs:
     #if: github.ref == 'refs/heads/main'
     steps:
       - run: |
-          apt-get update
-          apt-get -y install curl gnupg wget
+          sudo apt-get update
+          sudo apt-get -y install curl gnupg wget
           curl -sL https://deb.nodesource.com/setup_16.x | bash -
-          apt-get -y install nodejs
+          sudo apt-get -y install nodejs
           wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
           DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt-get install ./google-chrome*.deb --yes
           ls -alrt

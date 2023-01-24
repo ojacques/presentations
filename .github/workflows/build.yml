@@ -115,5 +115,5 @@ jobs:
           ls -alrt
           mkdir pdf-pptx
           shopt -s extglob
-          for dir in ./!(pdf|node_modules)/; do mkdir pdf-pptx/$dir && npx -y @marp-team/marp-cli@latest --allow-local-files --html $dir/slides.md -o pdf-pptx/$dir/slides.pdf && npx -y @marp-team/marp-cli@latest --allow-local-files --html $dir/slides.md -o pdf-pptx/$dir/slides.pptx; done
+          for dir in ./!(pdf|node_modules)/; do ls -alrt && mkdir pdf-pptx/$dir && npx -y @marp-team/marp-cli@latest --allow-local-files --html $dir/README.md -o pdf-pptx/$dir/slides.pdf && npx -y @marp-team/marp-cli@latest --allow-local-files --html $dir/README.md -o pdf-pptx/$dir/slides.pptx && ls -alrt; done
           ls -alrt pdf-pptx/*

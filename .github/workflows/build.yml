@@ -40,7 +40,6 @@ jobs:
   linkcheck:
     name: Links
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
     steps:
       - uses: actions/checkout@master
       # https://github.com/marketplace/actions/markdown-link-check
@@ -70,6 +69,7 @@ jobs:
       - lint
       - linkcheck
       - StyleCheck
+      - build-pdf
     steps:
        # Checks out a copy of your repository on the ubuntu-latest machine
        # https://github.com/actions/checkout
@@ -79,19 +79,23 @@ jobs:
             clean: true
             token: ${{ github.token }}
       # Runs the website build
-      - run: wget https://github.com/magiclen/markdown2html-converter/releases/download/v1.1.6/markdown2html-converter && chmod a+x markdown2html-converter
-      - run: export PATH=$PATH:$(pwd) && mkdir site
-      #- run: shopt -s extglob && for folder in ./!\(site\)/ ; do echo handling $folder && mkdir site/$folder && npx @marp-team/marp-cli@latest --html ${folder}/README.md -o site/${folder}/index.html && cp ${folder}/* site/${folder}/; done
-      - run: mkdir site/aws-cdk-intro && npx @marp-team/marp-cli@latest --html aws-cdk-intro/README.md -o site/aws-cdk-intro/index.html && cp -r aws-cdk-intro/* site/aws-cdk-intro/
-      - run: mkdir site/snowcamp_2023 && npx @marp-team/marp-cli@latest --theme snowcamp_2023/snowcamp.css --html snowcamp_2023/README.md -o site/snowcamp_2023/index.html && cp -r snowcamp_2023/* site/snowcamp_2023/
-      - run: mkdir site/doc-as-code-10min && npx @marp-team/marp-cli@latest --html doc-as-code-10min/README.md -o site/doc-as-code-10min/index.html && cp -r doc-as-code-10min/* site/doc-as-code-10min/
-      - run: ./markdown2html-converter -f -o site/index.html README.md
-      # https://github.com/actions/upload-artifact
-      - uses: actions/upload-artifact@v2
+      - run: |
+          wget https://github.com/magiclen/markdown2html-converter/releases/download/v1.1.6/markdown2html-converter && chmod a+x markdown2html-converter
+          export PATH=$PATH:$(pwd) && mkdir site
+          mkdir site/aws-cdk-intro && npx @marp-team/marp-cli@latest --html aws-cdk-intro/README.md -o site/aws-cdk-intro/index.html && cp -r aws-cdk-intro/* site/aws-cdk-intro/
+          mkdir site/snowcamp_2023 && npx @marp-team/marp-cli@latest --theme snowcamp_2023/snowcamp.css --html snowcamp_2023/README.md -o site/snowcamp_2023/index.html && cp -r snowcamp_2023/* site/snowcamp_2023/
+          mkdir site/doc-as-code-10min && npx @marp-team/marp-cli@latest --html doc-as-code-10min/README.md -o site/doc-as-code-10min/index.html && cp -r doc-as-code-10min/* site/doc-as-code-10min/
+          ./markdown2html-converter -f -o site/index.html README.md
+      - uses: actions/upload-artifact@v3
         with:
           name: slides
           path: site/index.html
-
+      - uses: actions/download-artifact@master
+        with:
+          name: slides-pdf
+          path: site
+      - name: Display structure of downloaded files
+        run: ls -R
       #https://github.com/marketplace/actions/deploy-to-github-pages
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@3.6.2
@@ -99,3 +103,28 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.DEPLOYMENT_ACCESS_KEY }}
           BRANCH: gh_pages
           FOLDER: site
+
+  build-pdf:
+    name: Build PDF
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+      - name: Build PDF
+        run: |
+          sudo apt-get update
+          sudo apt-get -y install curl gnupg wget
+          curl -sL https://deb.nodesource.com/setup_18.x | sudo bash -
+          sudo apt-get -y install nodejs
+          wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+          DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC sudo apt-get install ./google-chrome*.deb --yes
+          ls -alrt
+          mkdir pdf
+          shopt -s extglob
+          for dir in ./!(pdf|node_modules)/; do mkdir pdf/$dir && npx -y @marp-team/marp-cli@latest --allow-local-files --html $dir/README.md -o pdf/$dir/slides.pdf; done
+          ls -alrt pdf/*
+      - uses: actions/upload-artifact@v3
+        with:
+          name: slides-pdf
+          path: pdf/

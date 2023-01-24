@@ -69,7 +69,7 @@ jobs:
       - lint
       - linkcheck
       - StyleCheck
-      - build-pdf-pptx
+      - build-pdf
     steps:
        # Checks out a copy of your repository on the ubuntu-latest machine
        # https://github.com/actions/checkout
@@ -92,7 +92,7 @@ jobs:
           path: site/index.html
       - uses: actions/download-artifact@master
         with:
-          name: slides-pdf-pptx
+          name: slides-pdf
           path: site
       - name: Display structure of downloaded files
         run: ls -R
@@ -104,14 +104,14 @@ jobs:
           BRANCH: gh_pages
           FOLDER: site
 
-  build-pdf-pptx:
-    name: Build PDF and PPTX
+  build-pdf:
+    name: Build PDF
     runs-on: ubuntu-latest
-    #if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main'
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
-      - name: Build PDF and PPTX
+      - name: Build PDF
         run: |
           sudo apt-get update
           sudo apt-get -y install curl gnupg wget
@@ -120,11 +120,11 @@ jobs:
           wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
           DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC sudo apt-get install ./google-chrome*.deb --yes
           ls -alrt
-          mkdir pdf-pptx
+          mkdir pdf
           shopt -s extglob
-          for dir in ./!(pdf-pptx|node_modules)/; do mkdir pdf-pptx/$dir && npx -y @marp-team/marp-cli@latest --allow-local-files --html $dir/README.md -o pdf-pptx/$dir/slides.pdf && npx -y @marp-team/marp-cli@latest --allow-local-files --html $dir/README.md -o pdf-pptx/$dir/slides.pptx; done
-          ls -alrt pdf-pptx/*
+          for dir in ./!(pdf|node_modules)/; do mkdir pdf/$dir && npx -y @marp-team/marp-cli@latest --allow-local-files --html $dir/README.md -o pdf/$dir/slides.pdf; done
+          ls -alrt pdf/*
       - uses: actions/upload-artifact@v3
         with:
-          name: slides-pdf-pptx
-          path: pdf-pptx/
+          name: slides-pdf
+          path: pdf/

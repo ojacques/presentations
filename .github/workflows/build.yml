@@ -80,8 +80,10 @@ jobs:
             token: ${{ github.token }}
       # Runs the website build
       - run: |
-          wget https://github.com/magiclen/markdown2html-converter/releases/download/v1.1.6/markdown2html-converter && chmod a+x markdown2html-converter
-          export PATH=$PATH:$(pwd) && mkdir site
+          wget -q https://github.com/magiclen/markdown2html-converter/releases/download/v1.1.6/markdown2html-converter && chmod a+x markdown2html-converter
+          export PATH=$PATH:$(pwd)
+          mkdir site
+          shopt -s extglob
           for dir in ./!(site)/; do mkdir site/$dir && npx @marp-team/marp-cli@latest --html $dir/README.md -o site/$dir/index.html && cp -r $dir/* site/$dir/; done
           ./markdown2html-converter -f -o site/index.html README.md
       - uses: actions/upload-artifact@v3

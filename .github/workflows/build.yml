@@ -109,7 +109,7 @@ jobs:
           curl -sL https://deb.nodesource.com/setup_16.x | bash -
           sudo apt-get -y install nodejs
           wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-          DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt-get install ./google-chrome*.deb --yes
+          DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC sudo apt-get install ./google-chrome*.deb --yes
           ls -alrt
           mkdir pdf-pptx
           shopt -s extglob

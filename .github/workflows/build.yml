@@ -69,6 +69,7 @@ jobs:
       - lint
       - linkcheck
       - StyleCheck
+      - build-pdf-pptx
     steps:
        # Checks out a copy of your repository on the ubuntu-latest machine
        # https://github.com/actions/checkout
@@ -85,11 +86,16 @@ jobs:
           mkdir site/snowcamp_2023 && npx @marp-team/marp-cli@latest --theme snowcamp_2023/snowcamp.css --html snowcamp_2023/README.md -o site/snowcamp_2023/index.html && cp -r snowcamp_2023/* site/snowcamp_2023/
           mkdir site/doc-as-code-10min && npx @marp-team/marp-cli@latest --html doc-as-code-10min/README.md -o site/doc-as-code-10min/index.html && cp -r doc-as-code-10min/* site/doc-as-code-10min/
           ./markdown2html-converter -f -o site/index.html README.md
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         with:
           name: slides
           path: site/index.html
-
+      - uses: actions/download-artifact@master
+        with:
+          name: slides-pdf-pptx
+          path: site
+      - name: Display structure of downloaded files
+        run: ls -R
       #https://github.com/marketplace/actions/deploy-to-github-pages
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@3.6.2
@@ -98,14 +104,15 @@ jobs:
           BRANCH: gh_pages
           FOLDER: site
 
-  build-pdf:
-    name: Build PDF
+  build-pdf-pptx:
+    name: Build PDF and PPTX
     runs-on: ubuntu-latest
     #if: github.ref == 'refs/heads/main'
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
-      - run: |
+      - name: Build PDF and PPTX
+        run: |
           sudo apt-get update
           sudo apt-get -y install curl gnupg wget
           curl -sL https://deb.nodesource.com/setup_18.x | sudo bash -
@@ -115,5 +122,9 @@ jobs:
           ls -alrt
           mkdir pdf-pptx
           shopt -s extglob
-          for dir in ./!(pdf|node_modules)/; do ls -alrt && mkdir pdf-pptx/$dir && npx -y @marp-team/marp-cli@latest --allow-local-files --html $dir/README.md -o pdf-pptx/$dir/slides.pdf && npx -y @marp-team/marp-cli@latest --allow-local-files --html $dir/README.md -o pdf-pptx/$dir/slides.pptx && ls -alrt; done
+          for dir in ./!(pdf-pptx|node_modules)/; do mkdir pdf-pptx/$dir && npx -y @marp-team/marp-cli@latest --allow-local-files --html $dir/README.md -o pdf-pptx/$dir/slides.pdf && npx -y @marp-team/marp-cli@latest --allow-local-files --html $dir/README.md -o pdf-pptx/$dir/slides.pptx; done
           ls -alrt pdf-pptx/*
+      - uses: actions/upload-artifact@v3
+        with:
+          name: slides
+          path: pdf-pptx/

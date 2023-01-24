@@ -126,5 +126,5 @@ jobs:
           ls -alrt pdf-pptx/*
       - uses: actions/upload-artifact@v3
         with:
-          name: slides
+          name: slides-pdf-pptx
           path: pdf-pptx/

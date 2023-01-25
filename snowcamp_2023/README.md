@@ -197,6 +197,10 @@ Je voulais remettre ici cette citation de Dr Werner Vogels, CTO AWS. "You Build 
 
 ---
 
+![orthographe](assets/spelling.excalidraw.png)
+
+---
+
 # Les plateformes
 
 <div class='center'>
@@ -222,9 +226,9 @@ Peter Gillard-Moss, ThoughtWorks
 
 # Définition - Platform Engineering
 
-> "L'ingénierie des plateformes est la discipline qui consiste à concevoir et à créer des chaînes d'outils et des flux de travail qui permettent aux organisations d'ingénierie logicielle de disposer de capacités en libre-service à l'ère du "cloud-native". Les ingénieurs de plateforme fournissent un produit intégré, souvent appelé "plateforme interne de développement", qui couvre les besoins opérationnels de l'ensemble du cycle de vie d'une application.
+> L'ingénierie des plateformes est la discipline qui consiste à concevoir et à créer des chaînes d'outils et des flux de travail qui permettent aux organisations d'ingénierie logicielle de disposer de capacités en libre-service à l'ère du "cloud-native". Les ingénieurs de plateforme fournissent un produit intégré, souvent appelé "*plateforme interne de développement*", qui couvre les besoins opérationnels de l'ensemble du cycle de vie d'une application.
 
-[Luca Galante](https://platformengineering.org/blog/what-is-platform-engineering)
+[Luca Galante, platformengineering.org](https://platformengineering.org/blog/what-is-platform-engineering)
 
 ---
 
@@ -256,10 +260,19 @@ Les standards ne réduisent pas la créativité, mais ils la boostent. Se mettre
 
 # Caractéristiques d'une bonne plateforme
 
+- Des utilisateurs !
 - Facile à adopter
 - Transparente dans sa gouvernance, son fonctionnement
 - Responsabilité partagée (Inner Source)
 - Flexible et extensible
+
+---
+
+# Un service
+
+<div class='center'>
+<img src=assets/service.excalidraw.png width=130% />
+</div>
 
 ---
 
@@ -276,30 +289,6 @@ Les standards ne réduisent pas la créativité, mais ils la boostent. Se mettre
 
 ---
 
-# Un service
-
-<div class='center'>
-<img src=assets/service.excalidraw.png height=130% />
-</div>
-
-<div class="container">
-<div class="col">
-
-Intéragit avec des tickets
-Responsabilité séparée
-Goulot d'étranglement
-
-</div>
-<div class="col">
-
-Peu d'évolution
-Pas d'extension
-Pas le choix d'adopter ou pas le service
-
-</div>
-
----
-
 ![bg](assets/sc_bg_divider.jpg)
 
 <!-- _class: titleslide -->
@@ -312,7 +301,7 @@ Pas le choix d'adopter ou pas le service
 
 📖 Kubernetes est une plateforme open source extensible et portable pour la gestion de charges de travail (workloads) et de services conteneurisés📖
 
-📖 Kubernetes a également été conçu pour servir de plateforme et favoriser la construction d’un écosystème de composants et d’outils facilitant le déploiement, la mise à l’échelle et la gestion des applications.📖
+📖 Kubernetes a également été conçu pour servir de *plateforme* et favoriser la construction d’un écosystème de composants et d’outils facilitant le déploiement, la mise à l’échelle et la gestion des applications.📖
 
 [source](https://kubernetes.io/fr/docs/concepts/overview/what-is-kubernetes/)
 
@@ -367,10 +356,10 @@ Présentation de l'écosystème qui fait de k8s un outil de choix pour réaliser
 
 ![bg left 70%](assets/platform-test.excalidraw.png)
 
-# Comme plateforme de test
+# Pour les tests
 
 - kubernetes cluster virtuel (nodes et network partagés entre cluster physique et virtuel)
-- Créer et détruire des environnements de teste à la volée
+- Créer et détruire des environnements de test à la volée
 
 ---
 
@@ -388,6 +377,7 @@ Présentation de l'écosystème qui fait de k8s un outil de choix pour réaliser
 
 # Monitoring des applications
 
+- [Opentelemetry](https://opentelemetry.io/)
 - [Grafana](https://github.com/grafana/grafana)
 - [Dynatrace](https://www.dynatrace.com/)
 - [Datadog](https://www.datadoghq.com/)
@@ -456,7 +446,7 @@ Instrumenter la stack Kubernetes pour forcer la conformité :
 
 ![bg right:65% 100%](assets/pipelines.excalidraw.png)
 
-# Améliorer le temps de reprise après sinistre
+# Améliorer le temps de reprise après sinistre (MTTR)
 
 <!--
 
@@ -501,7 +491,11 @@ Instrumenter la stack Kubernetes pour forcer la conformité :
 Developers should be able to deploy and run their apps and services end to end. “You build it, you run it”. True DevOps.
 -->
 
-Les développeurs devraient être capable de déployer et d'opérer leurs applications et services de bout en bout. "Tu le crées, tu l'opères". C'est le vrai DevOps.
+Les développeurs doivent être capable de déployer et d'opérer leurs applications et services de bout en bout.
+
+<br/><br/>
+"You build it, you run it" - Tu le crées, tu l'opères
+...au dessus d'une plateforme💡
 
 ---
 

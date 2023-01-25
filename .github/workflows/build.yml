@@ -85,6 +85,7 @@ jobs:
           mkdir site
           shopt -s extglob
           for dir in ./!(site)/; do mkdir site/$dir && npx @marp-team/marp-cli@latest --html $dir/README.md -o site/$dir/index.html && cp -r $dir/* site/$dir/; done
+          npx @marp-team/marp-cli@latest --theme snowcamp_2023/snowcamp.css --html snowcamp_2023/README.md -o site/snowcamp_2023/index.html
           ./markdown2html-converter -f -o site/index.html README.md
       - uses: actions/upload-artifact@v3
         with:

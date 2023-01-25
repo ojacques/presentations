@@ -84,9 +84,7 @@ jobs:
           export PATH=$PATH:$(pwd)
           mkdir site
           shopt -s extglob
-          mkdir site/aws-cdk-intro && npx @marp-team/marp-cli@latest --html aws-cdk-intro/README.md -o site/aws-cdk-intro/index.html && cp -r aws-cdk-intro/* site/aws-cdk-intro/
-          mkdir site/snowcamp_2023 && npx @marp-team/marp-cli@latest --theme snowcamp_2023/snowcamp.css --html snowcamp_2023/README.md -o site/snowcamp_2023/index.html && cp -r snowcamp_2023/* site/snowcamp_2023/
-          mkdir site/doc-as-code-10min && npx @marp-team/marp-cli@latest --html doc-as-code-10min/README.md -o site/doc-as-code-10min/index.html && cp -r doc-as-code-10min/* site/doc-as-code-10min/
+          for dir in ./!(site)/; do mkdir site/$dir && npx @marp-team/marp-cli@latest --theme $dir/theme.css --html $dir/README.md -o site/$dir/index.html && cp -r $dir/* site/$dir/; done
           ./markdown2html-converter -f -o site/index.html README.md
       - uses: actions/upload-artifact@v3
         with:
@@ -123,7 +121,7 @@ jobs:
           DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC sudo apt-get install ./google-chrome*.deb --yes
           mkdir pdf
           shopt -s extglob
-          for dir in ./!(pdf|node_modules)/; do mkdir pdf/$dir && npx -y @marp-team/marp-cli@latest --allow-local-files --html $dir/README.md -o pdf/$dir/slides.pdf; done
+          for dir in ./!(pdf|node_modules)/; do mkdir pdf/$dir && npx -y @marp-team/marp-cli@latest --allow-local-files --theme $dir/theme.css --html $dir/README.md -o pdf/$dir/slides.pdf; done
           ls -alrt pdf/*
       - uses: actions/upload-artifact@v3
         with:

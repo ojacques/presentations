@@ -21,6 +21,9 @@ style: |
     margin: -400px 0 0 320px;
     font-size: 50px;
   }
+  section.titleslide img {
+    margin-left: 200px;
+  }
   section.dividerslide h1 {
     color: #ffffff;
     margin-left: 100px;
@@ -521,7 +524,4 @@ Les développeurs devraient être capable de déployer et d'opérer leurs applic
 # Merci
 
 ## 🐤 @ojacques2 🐤 @angegar
-
-<br/><br/><br/><br/><br/><br/><br/><br/>
-
-![QR code](assets/qr_code.png)
+<br/><br/><br/><br/><img src=assets/feedback.jpg width="30%"/> <img src=assets/qr_code_slides.png width="30%"/>

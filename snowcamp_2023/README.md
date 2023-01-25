@@ -354,11 +354,11 @@ Présentation de l'écosystème qui fait de k8s un outil de choix pour réaliser
 # Pour la CI / CD
 
 - CI
-  - JenkinsX
-  - Tekton
+  - [JenkinsX](https://jenkins-x.io/)
+  - [Tekton](https://tekton.dev/)
 - CD
-  - ArgoCD
-  - Flux
+  - [ArgoCD](https://argo-cd.readthedocs.io/en/stable/)
+  - [Flux](https://fluxcd.io/)
 
 ---
 

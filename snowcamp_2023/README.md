@@ -101,7 +101,6 @@ Ou même, vous avez vu passer dans votre fil d'actualité que DevOps était mort
 <!-- markdown-link-check-enable -->
 ![height:60px](assets/atos-logo.png)
 
-
 DevOps Coach,
 AWS Solution Architect,
 Kubernetes evangelist

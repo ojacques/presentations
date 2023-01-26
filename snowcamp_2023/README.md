@@ -38,7 +38,7 @@ style: |
 footer: '🐤 [@ojacques2](https://twitter.com/ojacques2), 🐤 [@angegar](https://twitter.com/angegar)'
 ---
 
-![bg](assets/sc_bg_title.jpg)
+![Le titre de la conférence: Platform Engineering bg](assets/sc_bg_title.jpg)
 
 <!-- _class: titleslide -->
 
@@ -500,11 +500,9 @@ Les développeurs doivent être capable de déployer et d'opérer leurs applicat
 
 ---
 
-# Littérature
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-
-![drop-shadow:0,4px,10px,rgba(0,0,0,.4) bg 40%](assets/team_topologies_book.jpg)
-![drop-shadow:0,4px,10px,rgba(0,0,0,.4) bg 40%](assets/platform_strategy.png)
+[![drop-shadow:0,4px,10px,rgba(0,0,0,.4) bg 80%](assets/team_topologies_book.jpg)](https://www.amazon.fr/Team-Topologies-Organizing-Business-Technology-ebook/dp/B09JWT9S4D)
+[![drop-shadow:0,4px,10px,rgba(0,0,0,.4) bg 80%](assets/platform_strategy.png)](https://leanpub.com/platformstrategy)
+[![drop-shadow:0,4px,10px,rgba(0,0,0,.4) bg 80%](assets/gregor_hohpe.jpg)](https://www.youtube.com/watch?v=WaL3ZbLgMuI&ab_channel=PlatformEngineering)
 
 ---
 

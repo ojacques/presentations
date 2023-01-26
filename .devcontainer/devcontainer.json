@@ -9,7 +9,7 @@
         "terminal.integrated.shell.linux": "/bin/bash",
         "markdown.marp.enableHtml": true,
         "markdown.marp.themes": [
-            "./snowcamp_2023/snowcamp.css"
+            "./snowcamp_2023/theme.css"
         ],
         "cSpell.language": ",en"
     },

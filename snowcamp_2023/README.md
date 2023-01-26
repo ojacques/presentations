@@ -51,58 +51,18 @@ Olivier Jacques - AWS
 
 <!--
 Intro:
-Bonjour à tous. Vous êtes ici parce que : 
-- vous voulez comprendre ce qu'est le platform engineering, pourquoi, et comment le mettre en place ? Vous êtes dans la bonne salle.
-- vous créez des plateforme, et que vous aimeriez bien que tout cela suive les bonne pratiques d'ingénierie. Vous êtes dans la bonne salle
-- Vous cherchez à savoir pourquoi Kubernetes est une magnifique plateforme de plateformes. Vous êtes dans la bonne salle.
-- Vous pensez vous êtes trompé de salle. Restez quand même, j'ai des bonbons Kréma pour ceux qui répondent à nos questions.
+Bonjour à tous. Et merci d'être venu à notre conférence sur le Platform Engineering et Kubernetes.
 
-- -->
+Mais Laurent et moi on se pose la question:
 
----
-<div class="container">
-<div class="col">
-
-![drop-shadow:0,5px,10px,rgba(0,0,0,.4) width:300px](https://media.licdn.com/dms/image/C4D03AQHAHQ3ml3xL2g/profile-displayphoto-shrink_800_800/0/1606292311924?e=1678320000&v=beta&t=C1uIawGRh8n7iVepZ48qTh0VZVZTHaZ1gCplRdcNcmk)
-
-<!-- markdown-link-check-disable -->
-## [Laurent GIL](https://www.linkedin.com/in/laurent-gil/)
-<!-- markdown-link-check-enable -->
-
-DevOps Coach,
-AWS Solution Architect,
-Kubernetes evangelist
-
-</div>
-
-<div class="col">
-
-![drop-shadow:0,4px,10px,rgba(0,0,0,.4) width:300px](https://media.licdn.com/dms/image/D4E03AQFUu10C9Itf8A/profile-displayphoto-shrink_800_800/0/1668752660252?e=1678320000&v=beta&t=Hs8485uJGgD-VgmTWJfpv26crAxdVRFP-53wBBdBZGk)
-<!-- markdown-link-check-disable -->
-## [Olivier JACQUES](https://www.linkedin.com/in/olivierjacques/)
-<!-- markdown-link-check-enable -->
-
-<!--
-I am Laurent. I've been working at manomano for 5 years where I had several roles,
-Lead Developer, QA, and now QE.
-My goal is to reduce the friction and time wasted due to an ecosystem in order to improve the developer.experience.
 -->
-
-Sr Cloud & DevOps Architect
-AWS
-
-</div>
-
-</div>
 
 ---
 
 ![bg 50%](assets/gartner-top-10-2023.png)
 
 <!--
-
-SGartner a listé Platform Engineering comme l'une des tendances majeures pour 2023.
-
+Vous êtes venus parceque que vous avez vu que Platform Engineering fait partie des tendances technologiques 2023, d'après Gartner ?
 -->
 
 ---
@@ -115,6 +75,10 @@ SGartner a listé Platform Engineering comme l'une des tendances majeures pour 2
 <img src=assets/gartner-hype-cycle.jpg width=75%/>
 </div>
 
+<!--
+Vous êtes venus parceque que vous avez vu que le Platform Engineering faisait partie des pratiques au tout début de leur vie sur le cycle de l'efferscence Gartner ?
+-->
+
 ---
 
 # DevOps est ☠️ ?
@@ -122,13 +86,50 @@ SGartner a listé Platform Engineering comme l'une des tendances majeures pour 2
 ![bg right 60% ](assets/tweet_devops_is_dead.jpg)
 
 <!--
-Récemment, j'ai vu passer un (des) tweet(s) disant que DevOps était mort. Je ne sais pas si c'est vrai ou non, mais je sais que le DevOps n'est pas mort. Il est juste en train de changer.
+Ou même, vous avez vu passer dans votre fil d'actualité que DevOps était mort, et comme votre titre sur votre badge est "DevOps", vous vous demandez par quoi vous allez le remplacer.
 
-Et comme la nature a horreur du vide, il faut bien que quelqu'un prenne le relais. Et nous parlerons donc de Platform Engineering.
+-->
 
-Ou plutôt, c'est ce que certains disent. Car, comme nous allons vous le démontrer, le platform engineering ne remplace pas DevOps, mais le complète.
+---
+<div class="container">
+<div class="col">
 
-Essayons ici de faire le tri.
+![drop-shadow:0,5px,10px,rgba(0,0,0,.4) width:300px](assets/laurent.jfif)
+
+<!-- markdown-link-check-disable -->
+## [Laurent GIL](https://www.linkedin.com/in/laurent-gil/)
+<!-- markdown-link-check-enable -->
+![height:60px](assets/atos-logo.png)
+
+
+DevOps Coach,
+AWS Solution Architect,
+Kubernetes evangelist
+
+</div>
+
+<div class="col">
+
+![drop-shadow:0,4px,10px,rgba(0,0,0,.4) width:300px](assets/olivier.jfif)
+
+<!-- markdown-link-check-disable -->
+## [Olivier JACQUES](https://www.linkedin.com/in/olivierjacques/)
+<!-- markdown-link-check-enable -->
+![height:80px](assets/aws-logo.png)
+
+Sr Cloud & DevOps Architect
+
+</div>
+
+</div>
+
+<!--
+Si vous vous posez ces questions, et bien vous êtes dans la bonne salle. Aujourd'hui, Laurent et moi même allons vous parler de l'ingénierie de plateformes (platform engineering), et comment et pourquoi Kubernetes peut fournir de solides fondations.
+
+Je m'appelle Olivier Jacques, et je suis architecte Cloud & DevOps à AWS.
+Je m'appelle Laurent Gil, ...
+
+Laurent et moi, nous avons participé à la construction de plateformes, Laurent continue à le faire à Atos, et moi-même j'aide les clients d'AWS à construire leur propre plateforme. La plus grosse que nous ayons construit accueillait jusqu'à 30,000 builders et consistait à leur fournir tout ce qu'il faut pour définir, développer, tester, déployer et opérer les applications de notre entreprise. Cette plateforme - qui nous survécu puisque nous avons quitté l'entreprise depuis - comportait du Kubernetes, mais pas que. Et nous aurons l'occasion d'en reparler tout au long de cette présentation, car, il s'agit bien ici d'un retour d'expérience, et de convictions forgées au fur et à mesure depuis 2017.
 -->
 
 ---
@@ -149,10 +150,11 @@ Essayons ici de faire le tri.
 <br/><br/><br/><br/><br/><br/><br/>
 
 # "You build it, you run it"
+## (Tu le crées, tu l'opères)
 ## 2016, Dr Werner Vogels, CTO AWS
 
 <!-- 
-Je voulais remettre ici cette citation de Dr Werner Vogels, CTO AWS. "You Build it, you run it". C'est important, car c'est comme cela que nous opérons à AWS. Cela dit, tout n'est pas dit dans ces 6 mots. Pour opérer ainsi, nous avons besoin de plateformes. Notre plateforme est bien évidemment AWS, avec ces plus de 200 services que nous pouvons assembler pour créer des solutions. Mais pas seulement. Nous avons aussi des plateformes construites au dessus d'AWS, par nos équipes, pour encore améliorer la productivité de nos équipes. Et c'est là que le Platform Engineering entre en jeu.
+Je voulais remettre ici cette citation de Dr Werner Vogels, CTO d'AWS. "You Build it, you run it". C'est important, car c'est comme cela que nous opérons à AWS. Cela dit, tout n'est pas dit dans ces 6 mots. Pour opérer ainsi, les ingénieurs d'AWS ont besoin de plateformes. Pour construire et opérer les plus de 200 services distincts que compose AWS à ce jour, notre plateforme est bien évidemment AWS lui-même. Mais pas seulement. Nous avons aussi des plateformes construites au dessus d'AWS, par nos équipes, pour améliorer la productivité de nos équipes, standardiser, sécuriser, éviter de ré-inventer la roue, et surtout innover du mieux suivant ce que nos clients nous demandent. Et c'est là que le Platform Engineering entre en jeu.
 -->
 
 ---
